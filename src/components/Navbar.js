@@ -56,7 +56,7 @@ const Navbar = class extends React.Component {
           >
             <Link to="#">Community</Link>
             <Link to="#">About Us</Link>
-            <Link to="#"><img src="img/dooricon.png" alt="homepage" /></Link>
+            <Link to="#"><img src="img/dooricon.png" alt="homepage" style={{width: '20px'}} /></Link>
             <Link to="#">Calendar</Link>
             <Link to="#">Food & Drink</Link>
           </div>
