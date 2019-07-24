@@ -5,15 +5,18 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
-  title_logo
+  title,
+  description
 }) => (
   <div>
-    {title_logo}
+    <h2>{title}</h2>
+    <p>{description}</p>
   </div>
 )
 
 IndexPageTemplate.propTypes = {
-  title_logo: PropTypes.string
+  title: PropTypes.string,
+  description: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -22,7 +25,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        title_logo={frontmatter.title_logo}
+        title={frontmatter.title}
+        description={frontmatter.description}
       />
     </Layout>
   )
@@ -42,7 +46,8 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title_logo
+        title
+        description
       }
     }
   }
