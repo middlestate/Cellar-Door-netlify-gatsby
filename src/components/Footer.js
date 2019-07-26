@@ -14,17 +14,19 @@ const Footer = class extends React.Component {
             <img src="img/footer_logo.png" alt="cellar door"/>
           </Link>
           <div className="social-media">
-            <div className="social-icon-container"></div>
-
-
-
+            <div className="social-icon-container">
+              <div>Fb</div>
+            </div>
+            <div className="social-icon-container">
+              <div>Tw</div>
+            </div>
+            <div className="social-icon-container">
+              <div>Yt</div>
+            </div>
+            <div className="social-icon-container">
+              <div>Ig</div>
+            </div>
           </div>
-
-
-
-
-
-
         </div>
       </footer>
     )
