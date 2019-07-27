@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+// Note: Link component is only used for internal links. External links use <a></a>
+
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
@@ -41,15 +43,15 @@ export const IndexPageTemplate = ({
         <img src="img/truxtonmile.jpg" alt="artists" />
         <h2 className="artist-name">Truxton Mile</h2>
         <h4 className="description">Friday, July 19, 2019 @ Cellar Door</h4>
-        <Link to="#">
+        <a href="https://www.snvfoundation.org/details.php?id=1388">
           <button>Buy Tickets</button>
-        </Link>
-        <Link to="https://www.truxtonmile.com/">
+        </a>
+        <a href="https://www.truxtonmile.com/">
           <button>Website</button>
-        </Link>
+        </a>
       </div>
       <div className="spotify-container">
-        <iframe src="https://open.spotify.com/embed/artist/1o2oLRSKlPBVWKTQjfpNH5" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/artist/1o2oLRSKlPBVWKTQjfpNH5" title="playlist"  width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
 
