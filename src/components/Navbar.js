@@ -32,8 +32,8 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
+      <header
+        className="nav is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -54,14 +54,14 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <Link to="#">Community</Link>
-            <Link to="#">About Us</Link>
-            <Link to="#"><img src="img/dooricon.png" alt="homepage" style={{width: '20px'}} /></Link>
-            <Link to="#">Calendar</Link>
-            <Link to="#">Food & Drink</Link>
+            <Link to="#" className="nav-item community">Community</Link>
+            <Link to="#" className="nav-item about-us">About Us</Link>
+            <Link to="#" className="cellar-door-icon"><img src="img/dooricon.png" alt="homepage" style={{width: '20px'}} /></Link>
+            <Link to="#" className="nav-item calendar">Calendar</Link>
+            <Link to="#" className="nav-item fd">Food & Drink</Link>
           </div>
         </div>
-      </nav>
+      </header>
     )
   }
 }
