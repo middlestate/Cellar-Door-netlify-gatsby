@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(fonts/Gilroy-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Gilroy-SemiBold;
+  src: url(fonts/Gilroy-SemiBold.otf) format("opentype");
+}

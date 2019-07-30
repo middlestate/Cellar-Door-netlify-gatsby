@@ -24,6 +24,15 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Gilroy-Light', 'Gilroy-SemiBold'],
+          urls: ['src/components/fonts.css']
+        }
+      }
+    },
     // {
     //   resolve: 'gatsby-source-filesystem',
     //   options: {

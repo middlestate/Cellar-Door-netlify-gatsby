@@ -18,16 +18,16 @@ const Footer = class extends React.Component {
           </Link>
           <div className="social-media">
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{color: "#ffffff", display: "inline-block", width: "100%", verticalAlign: "-webkit-baseline-middle"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{color: "#ffffff", display: "inline-block", width: "100%", position: "relative", top: "8px" }} size="lg" />
             </div>
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={['fab', 'twitter']} style={{color: "#ffffff", display: "inline-block", width: "100%", verticalAlign: "-webkit-baseline-middle"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'twitter']} style={{color: "#ffffff", display: "inline-block", width: "100%", position: "relative", top: "8px" }} size="lg" />
             </div>
             <div className="social-icon-container">
-            <FontAwesomeIcon icon={['fab', 'youtube']} style={{color: "#ffffff", display: "inline-block", width: "100%", verticalAlign: "-webkit-baseline-middle"}} size="lg" />
+            <FontAwesomeIcon icon={['fab', 'youtube']} style={{color: "#ffffff", display: "inline-block", width: "100%", position: "relative", top: "8px" }} size="lg" />
             </div>
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={['fab', 'instagram']} style={{color: "#ffffff", display: "inline-block", width: "100%", verticalAlign: "-webkit-baseline-middle"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'instagram']} style={{color: "#ffffff", display: "inline-block", width: "100%", position: "relative", top: "8px" }} size="lg" />
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ export const IndexPageTemplate = ({
           <button>Menus</button>
         </Link>
       </div>
-      <p>{description}</p>      
+      <p className="description">{description}</p>      
     </div>
   </main>
 )
