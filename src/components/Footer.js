@@ -18,16 +18,16 @@ const Footer = class extends React.Component {
           </Link>
           <div className="social-media">
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={faFacebook} style={{color: "#ffffff"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={faTwitter} style={{color: "#ffffff"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'twitter']} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-            <FontAwesomeIcon icon={faYoutube} style={{color: "#ffffff"}} size="lg" />
+            <FontAwesomeIcon icon={['fab', 'youtube']} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-              <FontAwesomeIcon icon={faInstagram} style={{color: "#ffffff"}} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'instagram']} style={{color: "#ffffff"}} size="lg" />
             </div>
           </div>
         </div>
