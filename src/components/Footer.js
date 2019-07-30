@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook,  faTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -15,16 +18,16 @@ const Footer = class extends React.Component {
           </Link>
           <div className="social-media">
             <div className="social-icon-container">
-              <div>Fb</div>
+              <FontAwesomeIcon icon={faFacebook} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-              <div>Tw</div>
+              <FontAwesomeIcon icon={faTwitter} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-              <div>Yt</div>
+            <FontAwesomeIcon icon={faYoutube} style={{color: "#ffffff"}} size="lg" />
             </div>
             <div className="social-icon-container">
-              <div>Ig</div>
+              <FontAwesomeIcon icon={faInstagram} style={{color: "#ffffff"}} size="lg" />
             </div>
           </div>
         </div>
