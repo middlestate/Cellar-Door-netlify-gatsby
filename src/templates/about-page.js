@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import '../components/about.sass'
+
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import Layout from '../components/Layout'
@@ -21,7 +23,6 @@ export const AboutPageTemplate = ({
     <div className="container">
       <div className="row">
         <div className="item">
-          /* 1 */
           <div className="dot-square">
             <div className="row">
               <div className="dot"></div>
@@ -41,7 +42,6 @@ export const AboutPageTemplate = ({
           </div>
         </div>
         <div className="item">
-          /* 2 */
           <h2 className="title">Community</h2>
           <p>We want to be a driving force in Visalia's creative
             community. The Cellar Door is a platform for people 
@@ -60,7 +60,6 @@ export const AboutPageTemplate = ({
       </div>
       <div className="row middle-row">
         <div className="item">
-          /* 3 */
           <h2 className="title">Culture</h2>
           <p>By partnering with nonprofits like the Sound N Vision
             Foundation and The Source and other community groups
@@ -73,7 +72,6 @@ export const AboutPageTemplate = ({
           </p>
         </div>
         <div className="item">
-          /* 4 */
           <div className="dot-square">
               <div className="row">
                 <div className="dot"></div>
@@ -95,7 +93,6 @@ export const AboutPageTemplate = ({
       </div>
       <div className="row">
         <div className="item">
-          /* 5 */
           <div className="circle">
             <div className="dot"></div>
             <div className="dot"></div>
@@ -112,7 +109,6 @@ export const AboutPageTemplate = ({
           </div>
         </div>
         <div className="item">
-          /* 6 */
           <h2 className="title">Craft</h2>
           <p>Whether it's one of our signature cocktails, crazy food
             concoctions or a hard-to-find bottle of wine you can bet
