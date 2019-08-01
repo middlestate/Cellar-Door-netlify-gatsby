@@ -13,6 +13,7 @@ export const IndexPageTemplate = ({
   artist_spotlight,
   artist_name,
   artist_description,
+  spotify_playlist,
   food_and_drinks_title,
   food_and_drinks_description
 }) => (
@@ -56,7 +57,7 @@ export const IndexPageTemplate = ({
         </a>
       </div>
       <div className="spotify-container">
-        <iframe src="https://open.spotify.com/embed/artist/1o2oLRSKlPBVWKTQjfpNH5" title="playlist"  width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src={spotify_playlist} title="playlist"  width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </div>
 
@@ -81,6 +82,7 @@ IndexPageTemplate.propTypes = {
   artist_spotlight: PropTypes.string,
   artist_name: PropTypes.string,
   artist_description: PropTypes.string,
+  spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
   food_and_drinks_description: PropTypes.string
 }
@@ -97,6 +99,7 @@ const IndexPage = ({ data }) => {
         artist_spotlight={frontmatter.artist_spotlight}
         artist_name={frontmatter.artist_name}
         artist_description={frontmatter.artist_description}
+        spotify_playlist={frontmatter.spotify_playlist}
         food_and_drinks_title={frontmatter.food_and_drinks_title}
         food_and_drinks_description={frontmatter.food_and_drinks_description}
       />
@@ -124,6 +127,7 @@ export const pageQuery = graphql`
         artist_spotlight
         artist_name
         artist_description
+        spotify_playlist
         food_and_drinks_title
         food_and_drinks_description
       }

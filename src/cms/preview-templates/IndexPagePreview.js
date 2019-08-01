@@ -14,6 +14,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         artist_spotlight={data.artist_spotlight}
         artist_name={data.artist_name}
         artist_description={data.artist_description}
+        spotify_playlist={data.spotify_playlist}
         food_and_drinks_title={data.food_and_drinks_title}
         food_and_drinks_description={data.food_and_drinks_description}
       />
