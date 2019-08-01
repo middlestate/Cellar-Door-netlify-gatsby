@@ -31,3 +31,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "calendar-page"}
           - {label: "title", name: "title", widget: "string"}
+      - file: "src/pages/foodanddrink.md"
+        label: "Food & Drink Page"
+        name: "foodanddrink"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "food&drink-page"}
