@@ -25,3 +25,9 @@ collections:
           - {label: "about_title", name: "about_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
+      - file: "src/pages/calendar.md"
+        label: "Calendar Page"
+        name: "calendar"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "calendar-page"}
+          - {label: "title", name: "title", widget: "string"}

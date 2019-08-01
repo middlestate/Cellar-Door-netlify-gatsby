@@ -18,11 +18,19 @@ body
 a  
   text-decoration: none 
  
+
+hr  
+  border: 0.5px solid #707070 
+ 
+
+
 /* Navbar and Hamburger Menu */
 .nav  
   text-align: right 
   height: 70px 
   line-height: 70px 
+  position: relative 
+  z-index: 5 
  
 
 .menu  
@@ -92,26 +100,112 @@ main
   margin: auto 
  
 
-.about-intro  
-  margin: 10% 
+.header  
+  display: flex 
+  flex-wrap: wrap 
+  justify-content: left 
+  align-items: center 
+  width: 50% 
+  margin: auto 
+  margin-left: 10% 
  
 
-.about-intro > .title  
-  text-align: center 
+#loading  
   font-family: Gilroy-SemiBold 
-  font-size: xx-large 
  
 
-.about-intro > .description  
-  font-size: 18px 
+.upcoming-events > .header > h3  
+  font-family: Gilroy-SemiBold 
+  font-size: 21px 
+  margin-left: 3% 
+  letter-spacing: 1px 
+  color: #AD0E2B 
+ 
+
+button, .description > a  
+  background-color: transparent 
+  color: #ffffff 
+  border-radius: 25px 
+  width: 140px 
+  height: 33px 
+  border: 2px solid #AD0E2B 
+  text-transform: uppercase 
+  font-size: 12px 
+  letter-spacing: 1px 
+  line-height: 20px 
+  margin: 10px 
+  padding: 5px 
+  text-align: center 
+ 
+
+button:hover  
+  cursor: pointer 
+ 
+
+.events-container  
+  display: flex 
+  flex-wrap: wrap 
+  justify-content: center 
+ 
+.event  
+  height: 300px 
+  flex-basis: 200px 
+  position: relative 
+  margin: auto 
+  border: 0.5px solid #707070 
+  min-width: 250px 
+  font-family: Gilroy-SemiBold 
+ 
+
+/* .event-time  
+  position: absolute 
+  bottom: 15px 
+  */
+
+.date  
+  font-size: 13px 
+ 
+
+.event > .title  
+  font-size: 23px 
+ 
+
+.event > .description  
+  font-size: 15px 
   font-family: Gilroy-Light 
   color: #EBEBEB 
   font-weight: 100 
-  padding-bottom: 20px 
+ 
+
+.description > a  
+  font-size: 13px 
+  display: block 
+  margin: 0 auto 
+  margin-left: 0 
+  height: 20px 
+  width: max-content 
+  margin-top: 5% 
+  padding: 5px 10px 
+ 
+
+.details  
+  font-weight: 100 
+  letter-spacing: 1px 
+  color: #AD0E2B 
+ 
+
+.calendar-title > .title  
+  font-family: Gilroy-Light 
+  letter-spacing: 2px 
+  font-weight: 100 
+  font-size: 50px 
+  text-align: center 
+  margin: 15% 
  
 
 footer  
   background-color: #AD0E2B 
+  margin-top: 20% 
  
 
 .footer-container  
@@ -172,126 +266,20 @@ footer
   left: 12px 
  
 
-/* ABOUT Page */
-.about-title  
-  font-family: Gilroy-Light 
-  letter-spacing: 2px 
-  font-weight: 100 
-  font-size: 50px 
-  text-align: center 
-  margin: 20% 
- 
+@media only screen and (min-width: 20px)  
+  .calendar-title > .title  
+    font-size: 35px 
+   
 
-.item > .title  
-  font-family: Gilroy-SemiBold 
-  font-size: xx-large 
-  margin: 0 
- 
-
-.item > p  
-  font-size: 18px 
-  font-family: Gilroy-Light 
-  color: #EBEBEB 
-  font-weight: 100 
- 
-
-/* Dot shapes */
-
-.dot-square  
-  width: 165px 
-  height: 150px 
-  background-color: transparent 
-  margin: 0 auto 
-  position: relative 
-  top: 50% 
-  transform: translateY(-50%) 
- 
-
-.dot-square > .row  
-  display: flex 
- 
-
-.circle  
-  width: 200px 
-  height: 200px 
-  background: transparent 
-  position: relative 
-  top: 50% 
-  left: 45% 
- 
-
-.circle > .dot  
-  width: 30px 
-  height: 30px 
-  background: white 
-  position: absolute 
-  border-radius: 50% 
- 
-
-.circle > .dot:nth-child(1)  
-  transform: rotate(0deg) translate(80px) 
- 
-.circle > .dot:nth-child(2)  
-  transform: rotate(30deg) translate(80px) 
- 
-.circle > .dot:nth-child(3)  
-  transform: rotate(60deg) translate(80px) 
- 
-.circle > .dot:nth-child(4)  
-  transform: rotate(90deg) translate(80px) 
- 
-.circle > .dot:nth-child(5)  
-  transform: rotate(120deg) translate(80px) 
- 
-.circle > .dot:nth-child(6)  
-  transform: rotate(150deg) translate(80px) 
- 
-.circle > .dot:nth-child(7)  
-  transform: rotate(180deg) translate(80px) 
- 
-.circle > .dot:nth-child(8)  
-  transform: rotate(210deg) translate(80px) 
- 
-.circle > .dot:nth-child(9)  
-  transform: rotate(240deg) translate(80px) 
- 
-.circle > .dot:nth-child(10)  
-  transform: rotate(270deg) translate(80px) 
- 
-.circle > .dot:nth-child(11)  
-  transform: rotate(300deg) translate(80px) 
- 
-.circle > .dot:nth-child(12)  
-  transform: rotate(330deg) translate(80px) 
- 
-
-
-.dot  
-  background-color: white 
-  width: 35px 
-  height: 35px 
-  border-radius: 25px 
-  margin: 10px 
- 
-
-.invisible-dot  
-  background-color: transparent 
- 
-
-.container  
-  margin-bottom: 15% 
- 
-
-@media only screen and (min-width: 320px)  
-  .circle  
-    width: 100px 
-    left: 40% 
+  .event  
+    padding: 5% 
+    height: auto 
    
  
 
-@media only screen and (min-width: 425px) and (max-width: 767px)  
-  .circle  
-    left: 45% 
+@media only screen and (min-width: 425px)  
+  .calendar-title > .title  
+    font-size: 50px 
    
  
 
@@ -325,6 +313,14 @@ footer
     margin: 0 auto 
    
 
+  .header  
+    justify-content: center 
+    padding: 5% 
+    min-width: 150px 
+    max-width: 155px 
+    margin: 0 auto 
+   
+
   .nav-item  
     border-top: none 
     border-bottom: none 
@@ -353,59 +349,35 @@ footer
     border: none 
    
 
-  .about-us > .title  
-    font-size: x-large 
+  .event  
+    margin: 25px 
    
 
-  .about-intro > .title  
-    font-size: x-large 
-   
-
-  .row  
-    display: block 
-   
-
-  .middle-row  
-    display: flex 
-    flex-direction: column-reverse 
-   
-
-  .item > .title  
-    text-align: center 
-   
-
-  .dot-square  
-    width: 135px 
-    height: 120px 
-    background-color: transparent 
+  .artist-container > button  
     margin: 0 auto 
-    position: relative 
-    top: 50% 
-    transform: translateY(-50%) 
+    margin-top: 10px 
+    margin-bottom: 10px 
    
 
-  .dot  
-    background-color: white 
-    width: 35px 
-    height: 25px 
-    border-radius: 25px 
-    margin: 10px 
+  .artist-container > .description  
+    font-size: large 
    
 
-  .invisible-dot  
-    background-color: transparent 
-   
-  
-  .circle > .dot  
-    width: 30px 
-    height: 30px 
-    background: white 
-    position: absolute 
-    border-radius: 50% 
+  .artist-name  
+    font-size: x-large 
    
 
-  .container > .row  
-    margin-top: 50% 
+  .spotify-container  
+    height: 400px 
+   
+
+  .food-and-drinks  
+    margin: 25% 0 25% 0 
+   
+
+  .food-and-drinks > .header > h3  
+    font-size: x-large 
+    text-align: center 
    
 
   .footer-container  
@@ -432,33 +404,20 @@ footer
     padding: 15px 30px 
    
 
+  .upcoming-events > .header  
+    margin-left: 4% 
+   
+
+  .event  
+    margin-bottom: 5% 
+   
+
   .contact  
     right: 0 
    
 
   .social-media  
     left: 0 
-   
-
-  .row  
-    display: flex 
-   
-
-  .item  
-    width: 50% 
-   
-
-  .middle-row > .item  
-    text-align: right 
-   
-
-  .middle-row  
-    border-top: 0.5px solid #707070 
-    border-bottom: 0.5px solid #707070 
-   
-
-  .container > .row  
-    padding: 50px 
    
 
   .fa-facebook-f  
@@ -469,14 +428,27 @@ footer
     padding-left: 1px 
    
 
+  .food-and-drinks > .header  
+    margin-left: 0 
+   
  
 
 @media only screen and (min-width: 1024px)  
   main, .menu, .footer-container  
-    max-width: 1000px 
+    max-width: 1200px 
    
 
   .nav-item  
     padding: 15px 60px 
+   
+
+  .upcoming-events > .header  
+    margin-left: 0 
+   
+
+  .event  
+    margin-top: 5% 
+    margin-bottom: 5% 
+    padding: 1.5% 
    
  
