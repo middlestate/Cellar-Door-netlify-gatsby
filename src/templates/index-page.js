@@ -11,7 +11,8 @@ export const IndexPageTemplate = ({
   description,
   events_button_title,
   artist_spotlight,
-  artist_name
+  artist_name,
+  artist_description
 }) => (
   <main>
     <div className="title-container">
@@ -44,7 +45,7 @@ export const IndexPageTemplate = ({
         <h2 className="title">{artist_spotlight}</h2>
         <img src="img/truxtonmile.jpg" alt="artists" />
         <h2 className="artist-name">{artist_name}</h2>
-        <h4 className="description">Friday, July 19, 2019 @ Cellar Door</h4>
+        <h4 className="description">{artist_description}</h4>
         <a href="https://www.snvfoundation.org/details.php?id=1388">
           <button>Buy Tickets</button>
         </a>
@@ -76,7 +77,8 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   artist_spotlight: PropTypes.string,
-  artist_name: PropTypes.string
+  artist_name: PropTypes.string,
+  artist_description: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -90,6 +92,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         artist_spotlight={frontmatter.artist_spotlight}
         artist_name={frontmatter.artist_name}
+        artist_description={frontmatter.artist_description}
       />
     </Layout>
   )
@@ -114,6 +117,7 @@ export const pageQuery = graphql`
         description
         artist_spotlight
         artist_name
+        artist_description
       }
     }
   }
