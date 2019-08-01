@@ -17,6 +17,7 @@ collections:
           - {label: "events_button_title", name: "events_button_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
+          - {label: "artist_spotlight", name: "artist_spotlight", widget: "string"}
       - file: "src/pages/about.md"
         label: "About Page"
         name: "about"

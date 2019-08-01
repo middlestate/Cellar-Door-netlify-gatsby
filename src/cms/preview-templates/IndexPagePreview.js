@@ -11,6 +11,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         events_button_title={data.events_button_title}
         title={data.title}
         description={data.description}
+        artist_spotlight={data.artist_spotlight}
       />
     )
   } else {

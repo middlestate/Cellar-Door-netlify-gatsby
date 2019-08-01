@@ -9,7 +9,8 @@ import Layout from '../components/Layout'
 export const IndexPageTemplate = ({
   title,
   description,
-  events_button_title
+  events_button_title,
+  artist_spotlight
 }) => (
   <main>
     <div className="title-container">
@@ -39,7 +40,7 @@ export const IndexPageTemplate = ({
 
     <div className="music-container">
       <div className="artist-container">
-        <h2 className="title">Artist Spotlight</h2>
+        <h2 className="title">{artist_spotlight}</h2>
         <img src="img/truxtonmile.jpg" alt="artists" />
         <h2 className="artist-name">Truxton Mile</h2>
         <h4 className="description">Friday, July 19, 2019 @ Cellar Door</h4>
@@ -72,7 +73,8 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   events_button_title: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  artist_spotlight: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -84,6 +86,7 @@ const IndexPage = ({ data }) => {
         events_button_title={frontmatter.events_button_title}
         title={frontmatter.title}
         description={frontmatter.description}
+        artist_spotlight={frontmatter.artist_spotlight}
       />
     </Layout>
   )
@@ -106,6 +109,7 @@ export const pageQuery = graphql`
         events_button_title
         title
         description
+        artist_spotlight
       }
     }
   }
