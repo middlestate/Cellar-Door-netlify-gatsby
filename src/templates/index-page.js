@@ -13,7 +13,8 @@ export const IndexPageTemplate = ({
   artist_spotlight,
   artist_name,
   artist_description,
-  food_and_drinks_title
+  food_and_drinks_title,
+  food_and_drinks_description
 }) => (
   <main>
     <div className="title-container">
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
           <button>Menus</button>
         </Link>
       </div>
-      <p className="description">{description}</p>      
+      <p className="description">{food_and_drinks_description}</p>      
     </div>
   </main>
 )
@@ -80,7 +81,8 @@ IndexPageTemplate.propTypes = {
   artist_spotlight: PropTypes.string,
   artist_name: PropTypes.string,
   artist_description: PropTypes.string,
-  food_and_drinks_title: PropTypes.string
+  food_and_drinks_title: PropTypes.string,
+  food_and_drinks_description: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -96,6 +98,7 @@ const IndexPage = ({ data }) => {
         artist_name={frontmatter.artist_name}
         artist_description={frontmatter.artist_description}
         food_and_drinks_title={frontmatter.food_and_drinks_title}
+        food_and_drinks_description={frontmatter.food_and_drinks_description}
       />
     </Layout>
   )
@@ -122,6 +125,7 @@ export const pageQuery = graphql`
         artist_name
         artist_description
         food_and_drinks_title
+        food_and_drinks_description
       }
     }
   }

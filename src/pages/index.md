@@ -7,4 +7,5 @@ artist_spotlight: "Artist Spotlight"
 artist_name: "Truxton Mile"
 artist_description: "Friday, July 19, 2019 @ Cellar Door"
 food_and_drinks_title: "Food & Drinks"
+food_and_drinks_description: "We are a hub of creative energy pushing the boundaries of collaboration in food, music, and art. Not afraid to explore new territories and shine the light on creators of all kinds - we are here to celebrate our community with you."
 ---
