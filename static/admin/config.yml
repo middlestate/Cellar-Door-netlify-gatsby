@@ -33,6 +33,9 @@ collections:
           - {label: "title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
           - {label: "community_title", name: "community_title", widget: "string"}
+          - {label: "community_description_p1", name: "community_description_p1", widget: "string"}
+          - {label: "community_description_p2", name: "community_description_p2", widget: "string"}
+          - {label: "community_description_p3", name: "community_description_p3", widget: "string"}
       - file: "src/pages/calendar.md"
         label: "Calendar Page"
         name: "calendar"

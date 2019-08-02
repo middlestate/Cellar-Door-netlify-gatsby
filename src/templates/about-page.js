@@ -12,7 +12,10 @@ export const AboutPageTemplate = ({
   about_title,
   title,
   description,
-  community_title
+  community_title,
+  community_description_p1,
+  community_description_p2,
+  community_description_p3
 }) => (
   <main>
     <h1 className="about-title">{about_title}</h1>
@@ -45,19 +48,9 @@ export const AboutPageTemplate = ({
         <div className="item">
           <h2 className="title">{community_title}</h2>
           <div className="description">
-            <p>We want to be a driving force in Visalia's creative
-              community. The Cellar Door is a platform for people 
-              that make rad things and want to share it with their 
-              community.
-            </p>
-            <p>We want to bring in music, food, and art that will
-              inspire the next generation of creators and build an army
-              that will show up and support them.
-            </p>
-            <p>If your business or organization is looking for a home to
-              express themselves with a unique event or private gathering
-              we want to be your home.
-            </p>          
+            <p>{community_description_p1}</p>
+            <p>{community_description_p2}</p>
+            <p>{community_description_p3}</p>          
           </div>
         </div>
       </div>
@@ -138,7 +131,10 @@ AboutPageTemplate.propTypes = {
   about_title: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  community_title: PropTypes.string
+  community_title: PropTypes.string,
+  community_description_p1: PropTypes.string,
+  community_description_p2: PropTypes.string,
+  community_description_p3: PropTypes.string
 }
 
 const AboutPage = ({ data }) => {
@@ -151,6 +147,9 @@ const AboutPage = ({ data }) => {
         title={frontmatter.title}
         description={frontmatter.description}
         community_title={frontmatter.community_title}
+        community_description_p1={frontmatter.community_description_p1}
+        community_description_p2={frontmatter.community_description_p2}
+        community_description_p3={frontmatter.community_description_p3}
       />
     </Layout>
   )
@@ -174,6 +173,9 @@ export const pageQuery = graphql`
         title
         description
         community_title
+        community_description_p1
+        community_description_p2
+        community_description_p3
       }
     }
   }
