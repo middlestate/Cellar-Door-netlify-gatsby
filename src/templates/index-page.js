@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  cellar_door_title_image: PropTypes.string,
+  cellar_door_title_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   events_button_title: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
