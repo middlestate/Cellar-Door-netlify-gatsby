@@ -32,6 +32,7 @@ collections:
           - {label: "about_title", name: "about_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
+          - {label: "community_title", name: "community_title", widget: "string"}
       - file: "src/pages/calendar.md"
         label: "Calendar Page"
         name: "calendar"

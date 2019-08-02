@@ -11,6 +11,7 @@ const AboutPagePreview = ({ entry, getAsset }) => {
         about_title={data.about_title}
         title={data.title}
         description={data.description}
+        community_title={data.community_title}
       />
     )
   } else {

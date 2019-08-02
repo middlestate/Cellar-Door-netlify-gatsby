@@ -11,7 +11,8 @@ import Layout from '../components/Layout'
 export const AboutPageTemplate = ({
   about_title,
   title,
-  description
+  description,
+  community_title
 }) => (
   <main>
     <h1 className="about-title">{about_title}</h1>
@@ -42,7 +43,7 @@ export const AboutPageTemplate = ({
           </div>
         </div>
         <div className="item">
-          <h2 className="title">Community</h2>
+          <h2 className="title">{community_title}</h2>
           <p>We want to be a driving force in Visalia's creative
             community. The Cellar Door is a platform for people 
             that make rad things and want to share it with their 
@@ -130,7 +131,8 @@ export const AboutPageTemplate = ({
 AboutPageTemplate.propTypes = {
   about_title: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  community_title: PropTypes.string
 }
 
 const AboutPage = ({ data }) => {
@@ -142,6 +144,7 @@ const AboutPage = ({ data }) => {
         about_title={frontmatter.about_title}
         title={frontmatter.title}
         description={frontmatter.description}
+        community_title={frontmatter.community_title}
       />
     </Layout>
   )
@@ -164,6 +167,7 @@ export const pageQuery = graphql`
         about_title
         title
         description
+        community_title
       }
     }
   }
