@@ -11,4 +11,8 @@ community_description_p3: "If your business or organization is looking for a hom
 culture_title: "Culture"
 culture_description_p1: "By partnering with nonprofits like the Sound N Vision Foundation and The Source and other community groups we are trying to bring rich cultural experiences for all ages to our community."
 culture_description_p2: "We believe live music and performance art of all kinds are transformative and essential to creating an identity for your city."
+craft_title: "Craft"
+craft_description_p1: "Whether it's one of our signature cocktails, crazy food concoctions or a hard-to-find bottle of wine you can bet that what you get has been created with intention."
+craft_description_p2: "We challenged ourself with our new menu to answer the question ... "How do we make a menu that is as creative as we are?""
+craft_description_p3: "The outcome is a vibrant, always changing roster of food and drink options designed to be iterated on and improved."
 ---

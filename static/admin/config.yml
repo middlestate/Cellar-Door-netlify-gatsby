@@ -39,6 +39,10 @@ collections:
           - {label: "culture_title", name: "culture_title", widget: "string"}
           - {label: "culture_description_p1", name: "culture_description_p1", widget: "string"}
           - {label: "culture_description_p2", name: "culture_description_p2", widget: "string"}
+          - {label: "craft_title", name: "craft_title", widget: "string"}
+          - {label: "craft_description_p1", name: "craft_description_p1", widget: "string"}
+          - {label: "craft_description_p2", name: "craft_description_p2", widget: "string"}
+          - {label: "craft_description_p3", name: "craft_description_p3", widget: "string"}
       - file: "src/pages/calendar.md"
         label: "Calendar Page"
         name: "calendar"

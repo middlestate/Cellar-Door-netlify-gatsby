@@ -18,6 +18,10 @@ const AboutPagePreview = ({ entry, getAsset }) => {
         culture_title={data.culture_title}
         culture_description_p1={data.culture_description_p1}
         culture_description_p2={data.culture_description_p2}
+        craft_title={data.craft_title}
+        craft_description_p1={data.craft_description_p1}
+        craft_description_p2={data.craft_description_p2}
+        craft_description_p3={data.craft_description_p3}
       />
     )
   } else {

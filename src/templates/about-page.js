@@ -18,7 +18,11 @@ export const AboutPageTemplate = ({
   community_description_p3,
   culture_title,
   culture_description_p1,
-  culture_description_p2
+  culture_description_p2,
+  craft_title,
+  craft_description_p1,
+  craft_description_p2,
+  craft_description_p3
 }) => (
   <main>
     <h1 className="about-title">{about_title}</h1>
@@ -103,19 +107,11 @@ export const AboutPageTemplate = ({
           </div>
         </div>
         <div className="item">
-          <h2 className="title">Craft</h2>
+          <h2 className="title">{craft_title}</h2>
           <div className="description">
-            <p>Whether it's one of our signature cocktails, crazy food
-              concoctions or a hard-to-find bottle of wine you can bet
-              that what you get has been created with intention.
-            </p>
-            <p>We challenged ourself with our new menu to answer the 
-              question ... "How do we make a menu that is as creative
-              as we are?"
-            </p>
-            <p>The outcome is a vibrant, always changing roster of food
-              and drink options designed to be iterated on and improved.
-            </p>          
+            <p>{craft_description_p1}</p>
+            <p>{craft_description_p2}</p>
+            <p>{craft_description_p3}</p>
           </div>
         </div>
       </div>
@@ -133,7 +129,11 @@ AboutPageTemplate.propTypes = {
   community_description_p3: PropTypes.string,
   culture_title: PropTypes.string,
   culture_description_p1: PropTypes.string,
-  culture_description_p2: PropTypes.string
+  culture_description_p2: PropTypes.string,
+  craft_title: PropTypes.string,
+  craft_description_p1: PropTypes.string,
+  craft_description_p2: PropTypes.string,
+  craft_description_p3: PropTypes.string
 }
 
 const AboutPage = ({ data }) => {
@@ -152,6 +152,10 @@ const AboutPage = ({ data }) => {
         culture_title={frontmatter.culture_title}
         culture_description_p1={frontmatter.culture_description_p1}
         culture_description_p2={frontmatter.culture_description_p2}
+        craft_title={frontmatter.craft_title}
+        craft_description_p1={frontmatter.craft_description_p1}
+        craft_description_p2={frontmatter.craft_description_p2}
+        craft_description_p3={frontmatter.craft_description_p3}
       />
     </Layout>
   )
@@ -181,6 +185,10 @@ export const pageQuery = graphql`
         culture_title
         culture_description_p1
         culture_description_p2
+        craft_title
+        craft_description_p1
+        craft_description_p2
+        craft_description_p3
       }
     }
   }
