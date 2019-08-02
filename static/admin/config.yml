@@ -14,7 +14,7 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "cellar_door_title_image", name: "cellar_door_title_image", widget: "image"}
+          - {label: "Cellar Door Title Image", name: "cellar_door_title_image", widget: "image"}
           - {label: "events_button_title", name: "events_button_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}

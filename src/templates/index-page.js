@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
 }) => (
   <main>
     <div className="title-container">
-      <img src={cellar_door_title_image} alt="cellar door" />
+      <Img style={{height: 140, width: 300}} fluid={cellar_door_title_image.childImageSharp.fluid} alt="cellar door" />  
     </div>
 
     <div className="upcoming-events">
@@ -124,7 +124,13 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        cellar_door_title_image
+        cellar_door_title_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         events_button_title
         title
         description
