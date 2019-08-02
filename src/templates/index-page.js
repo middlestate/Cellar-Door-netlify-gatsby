@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 // Note: Link component is only used for internal links. External links use <a></a>
 
