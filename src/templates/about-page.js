@@ -15,7 +15,10 @@ export const AboutPageTemplate = ({
   community_title,
   community_description_p1,
   community_description_p2,
-  community_description_p3
+  community_description_p3,
+  culture_title,
+  culture_description_p1,
+  culture_description_p2
 }) => (
   <main>
     <h1 className="about-title">{about_title}</h1>
@@ -56,17 +59,10 @@ export const AboutPageTemplate = ({
       </div>
       <div className="row middle-row">
         <div className="item">
-          <h2 className="title">Culture</h2>
+          <h2 className="title">{culture_title}</h2>
           <div className="description">
-            <p>By partnering with nonprofits like the Sound N Vision
-              Foundation and The Source and other community groups
-              we are trying to bring rich cultural experiences for
-              all ages to our community.
-            </p>
-            <p>We believe live music and performance art of all kinds
-              are transformative and essential to creating an identity
-              for your city.
-            </p>          
+            <p>{culture_description_p1}</p>
+            <p>{culture_description_p2}</p>
           </div>
         </div>
         <div className="item">
@@ -134,7 +130,10 @@ AboutPageTemplate.propTypes = {
   community_title: PropTypes.string,
   community_description_p1: PropTypes.string,
   community_description_p2: PropTypes.string,
-  community_description_p3: PropTypes.string
+  community_description_p3: PropTypes.string,
+  culture_title: PropTypes.string,
+  culture_description_p1: PropTypes.string,
+  culture_description_p2: PropTypes.string
 }
 
 const AboutPage = ({ data }) => {
@@ -150,6 +149,9 @@ const AboutPage = ({ data }) => {
         community_description_p1={frontmatter.community_description_p1}
         community_description_p2={frontmatter.community_description_p2}
         community_description_p3={frontmatter.community_description_p3}
+        culture_title={frontmatter.culture_title}
+        culture_description_p1={frontmatter.culture_description_p1}
+        culture_description_p2={frontmatter.culture_description_p2}
       />
     </Layout>
   )
@@ -176,6 +178,9 @@ export const pageQuery = graphql`
         community_description_p1
         community_description_p2
         community_description_p3
+        culture_title
+        culture_description_p1
+        culture_description_p2
       }
     }
   }
