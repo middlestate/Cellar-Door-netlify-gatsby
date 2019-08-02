@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
-  cellar_door_title_image,
   title,
   description,
   events_button_title,
@@ -21,7 +19,7 @@ export const IndexPageTemplate = ({
 }) => (
   <main>
     <div className="title-container">
-      <Img style={{height: 140, width: 300}} fluid={cellar_door_title_image.childImageSharp.fluid} alt="cellar door" />  
+      <img src="img/logo.png" alt="cellar door" />
     </div>
 
     <div className="upcoming-events">
@@ -78,7 +76,6 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  cellar_door_title_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   events_button_title: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
@@ -96,7 +93,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        cellar_door_title_image={frontmatter.cellar_door_title_image}
         events_button_title={frontmatter.events_button_title}
         title={frontmatter.title}
         description={frontmatter.description}
@@ -125,13 +121,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        cellar_door_title_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         events_button_title
         title
         description
