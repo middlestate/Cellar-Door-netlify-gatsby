@@ -9,6 +9,22 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Gilroy-Light', 'Gilroy-SemiBold'],
+          urls: ['src/components/fonts.css']
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
     //   // keep as first gatsby-source-filesystem plugin for gatsby image support    
     {
       resolve: 'gatsby-source-filesystem',
@@ -18,20 +34,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+          path: `${__dirname}/static/img`,
+          name: 'images',
       },
-    },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['Gilroy-Light', 'Gilroy-SemiBold'],
-          urls: ['src/components/fonts.css']
-        }
-      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
