@@ -8,16 +8,17 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        title_image={data.title_image}
-        events_button_title={data.events_button_title}
-        title={data.title}
-        description={data.description}
-        artist_spotlight={data.artist_spotlight}
-        artist_name={data.artist_name}
-        artist_description={data.artist_description}
-        spotify_playlist={data.spotify_playlist}
-        food_and_drinks_title={data.food_and_drinks_title}
-        food_and_drinks_description={data.food_and_drinks_description}
+        title_image={entry.getIn(['data','title_image'])}
+        events_button_title={entry.getIn(['data','events_button_title'])}
+        title={entry.getIn(['data','title'])}
+        description={entry.getIn(['data.','description'])}
+        artist_spotlight={entry.getIn(['data','artist_spotlight'])}
+        artist_name={entry.getIn(['data','artist_name'])}
+        artist_image={entry.getIn(['data','artist_image'])}
+        artist_description={entry.getIn(['data','artist_description'])}
+        spotify_playlist={entry.getIn(['data','spotify_playlist'])}
+        food_and_drinks_title={entry.getIn(['data','food_and_drinks_title'])}
+        food_and_drinks_description={entry.getIn(['data','food_and_drinks_description'])}
       />
     )
   } else {
