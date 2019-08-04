@@ -7,6 +7,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
+  title_image,
   title,
   description,
   events_button_title,
