@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const CalendarPage = () => {
+const FoodandDrinkPage = () => {
   return (
     <Layout>
       <main>
@@ -11,4 +11,4 @@ const CalendarPage = () => {
   )
 }
 
-export default CalendarPage
+export default FoodandDrinkPage
