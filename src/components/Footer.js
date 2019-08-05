@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook,  faTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = class extends React.Component {
   render() {
