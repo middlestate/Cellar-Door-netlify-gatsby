@@ -13,6 +13,7 @@ export const IndexPageTemplate = ({
   events_button_title,
   artist_spotlight,
   artist_name,
+  artist_image,
   artist_description,
   spotify_playlist,
   food_and_drinks_title,
@@ -20,7 +21,7 @@ export const IndexPageTemplate = ({
 }) => (
   <main>
     <div className="title-container">
-      <img src={!!title_image.childImageSharp ? title_image.childImageSharp.fluid.src : title_image} alt="cellar door" />
+      <img src={title_image} alt="cellar door" />
     </div>
 
     <div className="upcoming-events">
@@ -47,7 +48,7 @@ export const IndexPageTemplate = ({
     <div className="music-container">
       <div className="artist-container">
         <h2 className="title">{artist_spotlight}</h2>
-        <img src="img/truxtonmile.jpg" alt="artists" />
+        <img src={artist_image} alt="artists" />
         <h2 className="artist-name">{artist_name}</h2>
         <h4 className="description">{artist_description}</h4>
         <a href="https://www.snvfoundation.org/details.php?id=1388">
@@ -83,6 +84,7 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   artist_spotlight: PropTypes.string,
   artist_name: PropTypes.string,
+  artist_image: PropTypes.oneOfType([PropTypes.string,PropTypes.object]),
   artist_description: PropTypes.string,
   spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
@@ -101,6 +103,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         artist_spotlight={frontmatter.artist_spotlight}
         artist_name={frontmatter.artist_name}
+        artist_image={frontmatter.artist_image}
         artist_description={frontmatter.artist_description}
         spotify_playlist={frontmatter.spotify_playlist}
         food_and_drinks_title={frontmatter.food_and_drinks_title}
@@ -130,6 +133,7 @@ export const pageQuery = graphql`
         description
         artist_spotlight
         artist_name
+        artist_image
         artist_description
         spotify_playlist
         food_and_drinks_title
