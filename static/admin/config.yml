@@ -52,6 +52,6 @@ collections:
           - {label: "title", name: "title", widget: "string"}
       - file: "src/pages/foodanddrink.md"
         label: "Food & Drink Page"
-        name: "foodanddrink"
+        name: "foodpage"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "food&drink-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "foodpage"}

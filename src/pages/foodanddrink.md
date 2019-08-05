@@ -1,3 +1,0 @@
----
-templateKey: food&drink-page
----
