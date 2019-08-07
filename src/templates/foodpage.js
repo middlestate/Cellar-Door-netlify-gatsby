@@ -7,7 +7,7 @@ export const FoodPageTemplate = ({
   pdf
 }) => (
     <Layout>
-      <embed src={menu} title="menu" style={{width:"100%", height:1024}} />
+      <embed src={menu} title="menu" style={{width:"100%", height:1500}} />
     </Layout>
 )
 
