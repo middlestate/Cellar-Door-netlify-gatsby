@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({
     <div className="music-container">
       <div className="artist-container">
         <h2 className="title">{artist_spotlight}</h2>
-        <img src={artist_image} alt="artists" />
+        <img src={!!artist_image.childImageSharp ? artist_image.childImageSharp.fluid.src : artist_image} alt="artists" />
         <h2 className="artist-name">{artist_name}</h2>
         <h4 className="description">{artist_description}</h4>
         <a href="https://www.snvfoundation.org/details.php?id=1388">
@@ -84,7 +84,7 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   artist_spotlight: PropTypes.string,
   artist_name: PropTypes.string,
-  artist_image: PropTypes.oneOfType([PropTypes.string,PropTypes.object]),
+  artist_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   artist_description: PropTypes.string,
   spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
@@ -139,7 +139,13 @@ export const pageQuery = graphql`
         description
         artist_spotlight
         artist_name
-        artist_image
+        artist_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         artist_description
         spotify_playlist
         food_and_drinks_title
