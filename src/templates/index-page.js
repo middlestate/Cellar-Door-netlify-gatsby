@@ -7,7 +7,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
-  title_image,
+  image,
   title,
   description,
   events_button_title,
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
 }) => (
   <main>
     <div className="title-container">
-      <img src={title_image} alt="cellar door" />
+      <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="cellar door" />
     </div>
 
     <div className="upcoming-events">
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  title_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   events_button_title: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
@@ -97,7 +97,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        title_image={frontmatter.title_image}
+        image={frontmatter.image}
         events_button_title={frontmatter.events_button_title}
         title={frontmatter.title}
         description={frontmatter.description}
@@ -127,7 +127,13 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title_image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         events_button_title
         title
         description

@@ -10,15 +10,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['Gilroy-Light', 'Gilroy-SemiBold'],
-          urls: ['src/components/fonts.css']
-        }
-      }
-    },
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -69,6 +60,15 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Gilroy-Light', 'Gilroy-SemiBold'],
+          urls: ['src/components/fonts.css']
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
