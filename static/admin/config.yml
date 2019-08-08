@@ -17,14 +17,14 @@ collections:
           - {label: "Image", name: "image", widget: image}
           - {label: "events_button_title", name: "events_button_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
-          - {label: "description", name: "description", widget: "string"}
+          - {label: "description", name: "description", widget: "text"}
           - {label: "artist_spotlight", name: "artist_spotlight", widget: "string"}
+          - {label: "Artist Image", name: "artist_image", widget: image}          
           - {label: "Artist Name", name: "artist_name", widget: "string"}
-          - {label: "Artist Image", name: "artist_image", widget: image}
-          - {label: "artist_description", name: "artist_description", widget: "string"}
+          - {label: "artist_description", name: "artist_description", widget: "text"}
           - {label: "spotify_playlist", name: "spotify_playlist", widget: "string"}
           - {label: "food_and_drinks_title", name: "food_and_drinks_title", widget: "string"}
-          - {label: "food_and_drinks_description", name: "food_and_drinks_description", widget: "string"}
+          - {label: "food_and_drinks_description", name: "food_and_drinks_description", widget: "text"}
       - file: "src/pages/about.md"
         label: "About Page"
         name: "about"
@@ -32,18 +32,18 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "about_title", name: "about_title", widget: "string"}
           - {label: "title", name: "title", widget: "string"}
-          - {label: "description", name: "description", widget: "string"}
+          - {label: "description", name: "description", widget: "text"}
           - {label: "community_title", name: "community_title", widget: "string"}
-          - {label: "community_description_p1", name: "community_description_p1", widget: "string"}
-          - {label: "community_description_p2", name: "community_description_p2", widget: "string"}
-          - {label: "community_description_p3", name: "community_description_p3", widget: "string"}
+          - {label: "community_description_p1", name: "community_description_p1", widget: "text"}
+          - {label: "community_description_p2", name: "community_description_p2", widget: "text"}
+          - {label: "community_description_p3", name: "community_description_p3", widget: "text"}
           - {label: "culture_title", name: "culture_title", widget: "string"}
-          - {label: "culture_description_p1", name: "culture_description_p1", widget: "string"}
-          - {label: "culture_description_p2", name: "culture_description_p2", widget: "string"}
+          - {label: "culture_description_p1", name: "culture_description_p1", widget: "text"}
+          - {label: "culture_description_p2", name: "culture_description_p2", widget: "text"}
           - {label: "craft_title", name: "craft_title", widget: "string"}
-          - {label: "craft_description_p1", name: "craft_description_p1", widget: "string"}
-          - {label: "craft_description_p2", name: "craft_description_p2", widget: "string"}
-          - {label: "craft_description_p3", name: "craft_description_p3", widget: "string"}
+          - {label: "craft_description_p1", name: "craft_description_p1", widget: "text"}
+          - {label: "craft_description_p2", name: "craft_description_p2", widget: "text"}
+          - {label: "craft_description_p3", name: "craft_description_p3", widget: "text"}
       - file: "src/pages/calendar.md"
         label: "Calendar Page"
         name: "calendar"
