@@ -21,7 +21,7 @@ collections:
           - {label: "Artist Section Title", name: "artist_spotlight", widget: "string"}
           - {label: "Artist Image", name: "artist_image", widget: image}          
           - {label: "Artist Name", name: "artist_name", widget: "string"}
-          - {label: "Artist Description", name: "artist_description", widget: "text"}
+          - {label: "Artist Description", name: "artist_description", widget: "string"}
           - {label: "Playlist", name: "spotify_playlist", widget: "string"}
           - {label: "Food Section Title", name: "food_and_drinks_title", widget: "string"}
           - {label: "Food Section Description", name: "food_and_drinks_description", widget: "text"}
