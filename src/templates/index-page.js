@@ -15,6 +15,8 @@ export const IndexPageTemplate = ({
   artist_name,
   artist_image,
   artist_description,
+  tickets_url,
+  artist_website,
   spotify_playlist,
   food_and_drinks_title,
   food_and_drinks_description
@@ -51,10 +53,10 @@ export const IndexPageTemplate = ({
         <img src={!!artist_image.childImageSharp ? artist_image.childImageSharp.fluid.src : artist_image} alt="artists" />
         <h2 className="artist-name">{artist_name}</h2>
         <h4 className="description">{artist_description}</h4>
-        <a href="https://www.snvfoundation.org/details.php?id=1388">
+        <a href={tickets_url}>
           <button>Buy Tickets</button>
         </a>
-        <a href="https://www.truxtonmile.com/">
+        <a href={artist_website}>
           <button>Website</button>
         </a>
       </div>
@@ -86,6 +88,8 @@ IndexPageTemplate.propTypes = {
   artist_name: PropTypes.string,
   artist_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   artist_description: PropTypes.string,
+  tickets_url: PropTypes.string,
+  artist_website: PropTypes.string,
   spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
   food_and_drinks_description: PropTypes.string
@@ -105,6 +109,8 @@ const IndexPage = ({ data }) => {
         artist_name={frontmatter.artist_name}
         artist_image={frontmatter.artist_image}
         artist_description={frontmatter.artist_description}
+        tickets_url={frontmatter.tickets_url}
+        artist_website={frontmatter.artist_website}
         spotify_playlist={frontmatter.spotify_playlist}
         food_and_drinks_title={frontmatter.food_and_drinks_title}
         food_and_drinks_description={frontmatter.food_and_drinks_description}
@@ -147,6 +153,8 @@ export const pageQuery = graphql`
           }
         }
         artist_description
+        tickets_url
+        artist_website
         spotify_playlist
         food_and_drinks_title
         food_and_drinks_description

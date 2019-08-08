@@ -22,6 +22,8 @@ collections:
           - {label: "Artist Image", name: "artist_image", widget: image}          
           - {label: "Artist Name", name: "artist_name", widget: "string"}
           - {label: "Artist Description", name: "artist_description", widget: "string"}
+          - {label: "Tickets Link", name: "tickets_url", widget: "string"}
+          - {label: "Artist Website", name: "artist_website", widget: "string"}
           - {label: "Playlist", name: "spotify_playlist", widget: "string"}
           - {label: "Food Section Title", name: "food_and_drinks_title", widget: "string"}
           - {label: "Food Section Description", name: "food_and_drinks_description", widget: "text"}
