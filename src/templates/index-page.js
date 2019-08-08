@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({
     <div className="upcoming-events">
       <div className="header">
         <h3>{events_button_title}</h3>
-        <Link to="#">
+        <Link to="/calendar">
           <button>All Events</button>
         </Link>
       </div>
@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
     <div className="about-us">
       <h2 className="title">{title}</h2>
       <p className="description">{description}</p>
-      <Link to="#">
+      <Link to="/about">
         <button>About</button>
       </Link>    
     </div>
@@ -68,7 +68,7 @@ export const IndexPageTemplate = ({
     <div className="food-and-drinks">
       <div className="header">
         <h3>{food_and_drinks_title}</h3>
-        <Link to="#">
+        <Link to="/foodpage">
           <button>Menus</button>
         </Link>
       </div>
