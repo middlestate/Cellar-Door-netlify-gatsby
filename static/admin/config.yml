@@ -14,17 +14,17 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Image", name: "image", widget: image}
-          - {label: "events_button_title", name: "events_button_title", widget: "string"}
-          - {label: "title", name: "title", widget: "string"}
-          - {label: "description", name: "description", widget: "text"}
-          - {label: "artist_spotlight", name: "artist_spotlight", widget: "string"}
+          - {label: "Title Image", name: "image", widget: image}
+          - {label: "Upcoming Events Section Title", name: "events_button_title", widget: "string"}
+          - {label: "Heading", name: "title", widget: "string"}
+          - {label: "Heading Description", name: "description", widget: "text"}
+          - {label: "Artist Section Title", name: "artist_spotlight", widget: "string"}
           - {label: "Artist Image", name: "artist_image", widget: image}          
           - {label: "Artist Name", name: "artist_name", widget: "string"}
-          - {label: "artist_description", name: "artist_description", widget: "text"}
-          - {label: "spotify_playlist", name: "spotify_playlist", widget: "string"}
-          - {label: "food_and_drinks_title", name: "food_and_drinks_title", widget: "string"}
-          - {label: "food_and_drinks_description", name: "food_and_drinks_description", widget: "text"}
+          - {label: "Artist Description", name: "artist_description", widget: "text"}
+          - {label: "Playlist", name: "spotify_playlist", widget: "string"}
+          - {label: "Food Section Title", name: "food_and_drinks_title", widget: "string"}
+          - {label: "Food Section Description", name: "food_and_drinks_description", widget: "text"}
       - file: "src/pages/about.md"
         label: "About Page"
         name: "about"
