@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="menu">
           <Link to="#" className="nav-item community">Community</Link>
           <Link to="/about" className="nav-item about-us">About Us</Link>
-          <Link to="#" className="cellar-door-icon"><img src="img/dooricon.png" alt="door_icon" /></Link>
+          <Link to="/" className="cellar-door-icon"><img src="img/dooricon.png" alt="door_icon" /></Link>
           <Link to="/calendar" className="nav-item calendar">Calendar</Link>
           <Link to="/foodpage" className="nav-item fd">Food & Drink</Link>
         </div>
