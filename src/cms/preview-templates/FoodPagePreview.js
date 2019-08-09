@@ -7,8 +7,8 @@ const FoodPagePreview = ({ entry,getAsset }) => {
 
   if(data) {
     return (
-      <FoodPageTemplate 
-        pdf={data.pdf}
+      <FoodPageTemplate
+        pdf={entry.getIn(['data','pdf'])}
       />
     )
   } else {
