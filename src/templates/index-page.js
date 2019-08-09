@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import EventCards from '../components/EventCards'
+
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import Layout from '../components/Layout'
@@ -29,12 +31,14 @@ export const IndexPageTemplate = ({
     <div className="upcoming-events">
       <div className="header">
         <h3>{events_button_title}</h3>
-        <Link to="/calendar">
+        <Link to="#">
           <button>All Events</button>
         </Link>
       </div>
       <div id="loading"></div>
-      <div className="events-container" id="events-container"></div>
+      <div className="events-container" id="events-container">
+        <EventCards maxEvents={3} />
+      </div>
     </div>
 
     <div className="about-us">
