@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../components/Layout'
 
 export const FoodPageTemplate = ({
@@ -35,7 +36,7 @@ export default FoodPage
 
 export const pageQuery = graphql`
   query FoodPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq. "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         pdf
       }
