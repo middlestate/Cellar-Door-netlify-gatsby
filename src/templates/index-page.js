@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import EventCards from '../components/EventCards'
 
 // Note: Link component is only used for internal links. External links use <a></a>
 
@@ -17,11 +18,14 @@ export const IndexPageTemplate = ({
   artist_description,
   spotify_playlist,
   food_and_drinks_title,
-  food_and_drinks_description
+  food_and_drinks_description,
 }) => (
   <main>
     <div className="title-container">
-      <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="cellar door" />
+      <img
+        src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}
+        alt="cellar door"
+      />
     </div>
 
     <div className="upcoming-events">
@@ -32,7 +36,9 @@ export const IndexPageTemplate = ({
         </Link>
       </div>
       <div id="loading"></div>
-      <div className="events-container" id="events-container"></div>
+      <div className="events-container" id="events-container">
+        <EventCards maxEvents={3} />
+      </div>
     </div>
 
     <div className="about-us">
@@ -40,15 +46,22 @@ export const IndexPageTemplate = ({
       <p className="description">{description}</p>
       <Link to="#">
         <button>About</button>
-      </Link>    
+      </Link>
     </div>
 
-    <hr/>
+    <hr />
 
     <div className="music-container">
       <div className="artist-container">
         <h2 className="title">{artist_spotlight}</h2>
-        <img src={!!artist_image.childImageSharp ? artist_image.childImageSharp.fluid.src : artist_image} alt="artists" />
+        <img
+          src={
+            !!artist_image.childImageSharp
+              ? artist_image.childImageSharp.fluid.src
+              : artist_image
+          }
+          alt="artists"
+        />
         <h2 className="artist-name">{artist_name}</h2>
         <h4 className="description">{artist_description}</h4>
         <a href="https://www.snvfoundation.org/details.php?id=1388">
@@ -59,11 +72,19 @@ export const IndexPageTemplate = ({
         </a>
       </div>
       <div className="spotify-container">
-        <iframe src={spotify_playlist} title="playlist"  width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe
+          src={spotify_playlist}
+          title="playlist"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
       </div>
     </div>
 
-    <hr/>
+    <hr />
 
     <div className="food-and-drinks">
       <div className="header">
@@ -72,7 +93,7 @@ export const IndexPageTemplate = ({
           <button>Menus</button>
         </Link>
       </div>
-      <p className="description">{food_and_drinks_description}</p>      
+      <p className="description">{food_and_drinks_description}</p>
     </div>
   </main>
 )
@@ -88,7 +109,7 @@ IndexPageTemplate.propTypes = {
   artist_description: PropTypes.string,
   spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
-  food_and_drinks_description: PropTypes.string
+  food_and_drinks_description: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
