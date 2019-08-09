@@ -3,13 +3,17 @@ import PropTypes from 'prop-types'
 import { FoodPageTemplate } from '../../templates/foodpage'
 
 const FoodPagePreview = ({ entry,getAsset }) => {
-  const data = entry.getIn(['data','menu']).toJS() || []
+  const data = entry.getIn(['data']).toJS()
 
-  return (
-    <FoodPageTemplate 
-      menu={{data}}
-    />    
-  )
+  if(data) {
+    return (
+      <FoodPageTemplate 
+        menu={data.menu}
+      />
+    )
+  } else {
+    return <div>Loading...</div>
+  }
 }
 
 FoodPagePreview.PropTypes = {
