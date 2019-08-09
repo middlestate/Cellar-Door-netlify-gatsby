@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 
 import '../components/calendar.sass'
 
+import EventCards from '../components/EventCards'
+
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import Layout from '../components/Layout'
@@ -14,6 +16,9 @@ export const CalendarPageTemplate = ({
   <main>
     <div className="calendar-title">
       <h1 className="title">Calendar</h1>
+    </div>
+    <div className="events-container" id="events-container">
+      <EventCards maxEvents={12} />
     </div>
   </main>
 )
