@@ -57,10 +57,4 @@ collections:
         name: "foodpage"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "foodpage"}
-          - label: "Menu"
-            name: "pdf"
-            widget: "file"
-            default: "/static/pdf/menu.pdf"
-            media_library:
-              config:
-                multiple: true
+          - {label: Menu, name: menu, widget: file, default: "/static/pdf/menu.pdf"}

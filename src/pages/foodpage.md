@@ -1,4 +1,4 @@
 ---
 templateKey: foodpage
-pdf: /static/pdf/menu.pdf
+menu: /static/pdf/menu.pdf
 ---
