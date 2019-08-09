@@ -52,7 +52,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "calendar-page"}
           - {label: "Page Title", name: "title", widget: "string"}
-      - file: "src/pages/foodanddrink.md"
+      - file: "src/pages/foodpage.md"
         label: "Food & Drink Page"
         name: "foodpage"
         fields:
