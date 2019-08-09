@@ -1,14 +1,44 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-import menu from './menu.pdf'
-
 export const FoodPageTemplate = ({
   pdf
 }) => (
-    <Layout>
-      <embed src={menu} title="menu" style={{width:"100%", height:1500}} />
-    </Layout>
+  <embed src={pdf} title="menu" style={{width:"100%", height:1500}} />
 )
 
-export default FoodPageTemplate
+FoodPageTemplate.propTypes = {
+  pdf: PropTypes.string
+}
+
+const FoodPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+
+  return (
+    <Layout>
+      <FoodPageTemplate
+        pdf={frontmatter.pdf}
+      />
+    </Layout>
+  )
+}
+
+FoodPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+}
+
+export default FoodPage
+
+export const pageQuery = graphql`
+  query FoodPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq. "index-page" } }) {
+      frontmatter {
+        pdf
+      }
+    }
+  }
+`
