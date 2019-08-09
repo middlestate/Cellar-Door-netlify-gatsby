@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
     <div className="upcoming-events">
       <div className="header">
         <h3>{events_button_title}</h3>
-        <Link to="#">
+        <Link to="/calendar">
           <button>All Events</button>
         </Link>
       </div>
