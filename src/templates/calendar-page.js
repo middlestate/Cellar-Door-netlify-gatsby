@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import '../components/calendar.sass'
-
 import EventCards from '../components/EventCards'
 
 // Note: Link component is only used for internal links. External links use <a></a>
