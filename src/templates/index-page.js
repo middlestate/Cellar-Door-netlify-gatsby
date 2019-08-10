@@ -9,6 +9,7 @@ import EventCards from '../components/EventCards'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
+  background_image,
   image,
   title,
   description,
@@ -25,7 +26,7 @@ export const IndexPageTemplate = ({
 }) => (
   <main
     style={{
-      backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`
+      backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image}) no-repeat center center fixed`
     }}>
     <div
     style={{
@@ -42,7 +43,7 @@ export const IndexPageTemplate = ({
         position: 'fixed',
         height: '100%',
         width: '100%',
-        backgroundImage: `url("../img/main_background.png")`,
+        backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
         backgroundRepeat: 'none',
         backgroundSize: 'cover',
         zIndex: -5
@@ -109,6 +110,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
+  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   events_button_title: PropTypes.string,
   title: PropTypes.string,
@@ -130,6 +132,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
+        background_image={frontmatter.background_image}
         image={frontmatter.image}
         events_button_title={frontmatter.events_button_title}
         title={frontmatter.title}
@@ -162,6 +165,13 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        background_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }    
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

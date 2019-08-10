@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+background_image: /img/main_background.png
 image: /img/logo.png
 events_button_title: "upcoming events"
 title: "Restaurant and Music Hall that defies definition"
