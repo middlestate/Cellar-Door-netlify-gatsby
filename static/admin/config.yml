@@ -33,6 +33,7 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Page Title", name: "about_title", widget: "string"}
           - {label: "Heading", name: "title", widget: "string"}
           - {label: "Heading Description", name: "description", widget: "text"}
