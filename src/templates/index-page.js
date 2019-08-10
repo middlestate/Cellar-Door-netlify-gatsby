@@ -23,7 +23,32 @@ export const IndexPageTemplate = ({
   food_and_drinks_title,
   food_and_drinks_description
 }) => (
-  <main style={{backgroundImage: `url('../img/main_background.png') + no-repeat center center fixed`}}>
+  <main
+    style={{
+      backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`
+    }}>
+    <div
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      height: '100vh',
+      width: '100vw',
+      backgroundColor: 'black',
+      zIndex: -10
+    }}>
+    <div
+      style={{
+        position: 'fixed',
+        height: '100%',
+        width: '100%',
+        backgroundImage: `url("../img/main_background.png")`,
+        backgroundRepeat: 'none',
+        backgroundSize: 'cover',
+        zIndex: -5
+      }}
+    />
+    </div>
     <div className="title-container">
       <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="cellar door" />
     </div>
