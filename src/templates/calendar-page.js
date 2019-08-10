@@ -13,7 +13,7 @@ import Layout from '../components/Layout'
 export const CalendarPageTemplate = ({
   title
 }) => (
-  <main>
+  <main style={{backgroundImage: `url('/static/img/main_background.png') + no-repeat center center fixed`}}>
     <div className="calendar-title">
       <h1 className="title">Calendar</h1>
     </div>

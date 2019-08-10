@@ -5,7 +5,9 @@ import Layout from '../components/Layout'
 export const FoodPageTemplate = ({
   menu
 }) => (
-  <embed src={menu} title="menu" style={{width:"100%", height:1500}} />
+  <main style={{backgroundImage: `url('/static/img/main_background.png') + no-repeat center center fixed`}}>
+    <embed src={menu} title="menu" style={{width:"100%", height:1500}} />  
+  </main>
 )
 
 FoodPageTemplate.propTypes = {

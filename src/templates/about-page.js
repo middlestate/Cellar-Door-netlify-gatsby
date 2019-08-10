@@ -24,7 +24,7 @@ export const AboutPageTemplate = ({
   craft_description_p2,
   craft_description_p3
 }) => (
-  <main>
+  <main style={{backgroundImage: `url('/static/img/main_background.png') + no-repeat center center fixed`}}>
     <h1 className="about-title">{about_title}</h1>
     <div className="about-intro">
       <h2 className="title">{title}</h2>
