@@ -53,6 +53,7 @@ collections:
         name: "calendar"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "calendar-page"}
+          - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Page Title", name: "title", widget: "string"}
       - file: "src/pages/foodpage.md"
         label: "Food & Drink Page"
