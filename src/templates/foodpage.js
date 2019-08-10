@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 export const FoodPageTemplate = ({
   menu
 }) => (
-  <main style={{backgroundImage: `url('/static/img/main_background.png') + no-repeat center center fixed`}}>
+  <main style={{backgroundImage: `url('/img/main_background.png') + no-repeat center center fixed`}}>
     <embed src={menu} title="menu" style={{width:"100%", height:1500}} />  
   </main>
 )
