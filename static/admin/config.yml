@@ -61,3 +61,10 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "foodpage"}
           - {label: Menu, name: menu, widget: file, default: "/static/pdf/menu.pdf"}
+      - file: "src/pages/community.md"
+        label: "Community Page"
+        name: "community"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "community-page"}
+          - {label: "Background Image", name: "background_image", widget: image}
+          - {label: "Page Title", name: "title", widget: "string"}
