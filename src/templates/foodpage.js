@@ -5,9 +5,24 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const FoodPageTemplate = ({ menu }) => (
-  <main>
-    <embed src={menu} title="menu" style={{ width: '100%', height: 1024 }} />
-  </main>
+  <div
+    style={{
+      positon: 'absolute',
+      top: 0,
+      left: 0,
+      height: '100vh',
+      width: '100vw',
+      backgroundImage: `url(../img/main_background.png)`,
+    }}
+  >
+    <main>
+      <embed
+        src={menu}
+        title="menu"
+        style={{ width: '100%', height: 850, marginTop: 10 }}
+      />
+    </main>
+  </div>
 )
 
 FoodPageTemplate.propTypes = {
@@ -16,7 +31,6 @@ FoodPageTemplate.propTypes = {
 
 const FoodPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log('PDF:', frontmatter)
   return (
     <Layout>
       <FoodPageTemplate menu={frontmatter.menu.publicURL} />
