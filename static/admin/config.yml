@@ -148,9 +148,6 @@ collections:
               default: 'foodpage',
             }
           - label: 'Manual PDF'
-            name: 'pdf'
+            name: 'menu'
             widget: 'file'
             default: 'src/assets/pdf/menu.pdf'
-            media_library:
-              config:
-                multiple: true

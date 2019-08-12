@@ -4,22 +4,22 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-export const FoodPageTemplate = ({ pdf }) => (
+export const FoodPageTemplate = ({ menu }) => (
   <main>
-    <embed src={pdf} title="menu" style={{ width: '100%', height: 1024 }} />
+    <embed src={menu} title="menu" style={{ width: '100%', height: 1024 }} />
   </main>
 )
 
 FoodPageTemplate.propTypes = {
-  pdf: PropTypes.string,
+  menu: PropTypes.string,
 }
 
 const FoodPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log('PDF:', frontmatter.pdf)
+  console.log('PDF:', frontmatter)
   return (
     <Layout>
-      <FoodPageTemplate pdf={frontmatter.pdf} />
+      <FoodPageTemplate menu={frontmatter.menu.publicURL} />
     </Layout>
   )
 }
@@ -34,15 +34,14 @@ FoodPage.propTypes = {
 
 export default FoodPage
 
-// export const pageQuery = graphql`
-//   query FoodPage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       frontmatter {
-//         pdf {
-//           file
-//         }
-//       }
-//     }
-//   }
-// `
-// export default FoodPageTemplate
+export const pageQuery = graphql`
+  query FoodPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "foodpage" } }) {
+      frontmatter {
+        menu {
+          publicURL
+        }
+      }
+    }
+  }
+`

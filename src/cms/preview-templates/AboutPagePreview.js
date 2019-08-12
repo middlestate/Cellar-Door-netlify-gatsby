@@ -8,6 +8,7 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <AboutPageTemplate
+        background_image={data.background_image}
         about_title={data.about_title}
         title={data.title}
         description={data.description}

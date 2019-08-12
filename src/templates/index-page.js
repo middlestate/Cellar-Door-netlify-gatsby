@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import EventCards from '../components/EventCards'
 
+
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
+  background_image,
   image,
   title,
   description,
@@ -16,11 +18,38 @@ export const IndexPageTemplate = ({
   artist_name,
   artist_image,
   artist_description,
+  tickets_url,
+  artist_website,
   spotify_playlist,
   food_and_drinks_title,
   food_and_drinks_description,
 }) => (
-  <main>
+  <main
+    style={{
+      backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image}) no-repeat center center fixed`
+    }}>
+    <div
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      height: '100vh',
+      width: '100vw',
+      backgroundColor: 'black',
+      zIndex: -10
+    }}>
+    <div
+      style={{
+        position: 'fixed',
+        height: '100%',
+        width: '100%',
+        backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
+        backgroundRepeat: 'none',
+        backgroundSize: 'cover',
+        zIndex: -5
+      }}
+    />
+    </div>
     <div className="title-container">
       <img
         src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}
@@ -31,7 +60,7 @@ export const IndexPageTemplate = ({
     <div className="upcoming-events">
       <div className="header">
         <h3>{events_button_title}</h3>
-        <Link to="#">
+        <Link to="/calendar">
           <button>All Events</button>
         </Link>
       </div>
@@ -44,7 +73,7 @@ export const IndexPageTemplate = ({
     <div className="about-us">
       <h2 className="title">{title}</h2>
       <p className="description">{description}</p>
-      <Link to="#">
+      <Link to="/about">
         <button>About</button>
       </Link>
     </div>
@@ -64,10 +93,10 @@ export const IndexPageTemplate = ({
         />
         <h2 className="artist-name">{artist_name}</h2>
         <h4 className="description">{artist_description}</h4>
-        <a href="https://www.snvfoundation.org/details.php?id=1388">
+        <a href={tickets_url}>
           <button>Buy Tickets</button>
         </a>
-        <a href="https://www.truxtonmile.com/">
+        <a href={artist_website}>
           <button>Website</button>
         </a>
       </div>
@@ -89,7 +118,7 @@ export const IndexPageTemplate = ({
     <div className="food-and-drinks">
       <div className="header">
         <h3>{food_and_drinks_title}</h3>
-        <Link to="#">
+        <Link to="/foodpage">
           <button>Menus</button>
         </Link>
       </div>
@@ -99,6 +128,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
+  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   events_button_title: PropTypes.string,
   title: PropTypes.string,
@@ -107,6 +137,8 @@ IndexPageTemplate.propTypes = {
   artist_name: PropTypes.string,
   artist_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   artist_description: PropTypes.string,
+  tickets_url: PropTypes.string,
+  artist_website: PropTypes.string,
   spotify_playlist: PropTypes.string,
   food_and_drinks_title: PropTypes.string,
   food_and_drinks_description: PropTypes.string,
@@ -118,6 +150,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
+        background_image={frontmatter.background_image}
         image={frontmatter.image}
         events_button_title={frontmatter.events_button_title}
         title={frontmatter.title}
@@ -126,6 +159,8 @@ const IndexPage = ({ data }) => {
         artist_name={frontmatter.artist_name}
         artist_image={frontmatter.artist_image}
         artist_description={frontmatter.artist_description}
+        tickets_url={frontmatter.tickets_url}
+        artist_website={frontmatter.artist_website}
         spotify_playlist={frontmatter.spotify_playlist}
         food_and_drinks_title={frontmatter.food_and_drinks_title}
         food_and_drinks_description={frontmatter.food_and_drinks_description}
@@ -148,6 +183,13 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        background_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }    
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -168,6 +210,8 @@ export const pageQuery = graphql`
           }
         }
         artist_description
+        tickets_url
+        artist_website
         spotify_playlist
         food_and_drinks_title
         food_and_drinks_description

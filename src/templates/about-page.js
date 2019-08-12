@@ -9,6 +9,7 @@ import '../components/about.sass'
 import Layout from '../components/Layout'
 
 export const AboutPageTemplate = ({
+  background_image,
   about_title,
   title,
   description,
@@ -24,7 +25,32 @@ export const AboutPageTemplate = ({
   craft_description_p2,
   craft_description_p3
 }) => (
-  <main>
+  <main
+    style={{
+      backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image}) no-repeat center center fixed`
+    }}>
+    <div
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      height: '100vh',
+      width: '100vw',
+      backgroundColor: 'black',
+      zIndex: -10
+    }}>
+    <div
+      style={{
+        position: 'fixed',
+        height: '100%',
+        width: '100%',
+        backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
+        backgroundRepeat: 'none',
+        backgroundSize: 'cover',
+        zIndex: -5
+      }}
+    />
+    </div>
     <h1 className="about-title">{about_title}</h1>
     <div className="about-intro">
       <h2 className="title">{title}</h2>
@@ -120,6 +146,7 @@ export const AboutPageTemplate = ({
 )
 
 AboutPageTemplate.propTypes = {
+  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   about_title: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
@@ -142,6 +169,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <AboutPageTemplate
+        background_image={frontmatter.background_image}
         about_title={frontmatter.about_title}
         title={frontmatter.title}
         description={frontmatter.description}
@@ -175,6 +203,13 @@ export const pageQuery = graphql`
   query AboutPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
+        background_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }    
+        }
         about_title
         title
         description

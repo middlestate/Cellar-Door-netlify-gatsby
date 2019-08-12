@@ -8,6 +8,7 @@ const CalendarPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <CalendarPageTemplate
+        background_image={data.background_image}
         title={data.title}
       />
     )
