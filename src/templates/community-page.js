@@ -49,10 +49,10 @@ export const CommunityPageTemplate = ({
     />
     </div>
     <h1 className="community-title">{title}</h1>
-    <div className="row">
+    <div className="gallery-row">
       {gallery.images.map((gridItem, keys) => {
         return (
-          <div key={keys} className="column">
+          <div key={keys} className="gallery-column">
             <img
               src={
                 !!gridItem.image.childImageSharp
