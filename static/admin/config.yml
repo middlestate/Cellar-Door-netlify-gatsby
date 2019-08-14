@@ -60,7 +60,7 @@ collections:
         name: "foodpage"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "foodpage"}
-          - {label: Menu, name: menu, widget: file, default: "/static/pdf/menu.pdf"}
+          - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/menu.pdf"}
       - file: "src/pages/community.md"
         label: "Community Page"
         name: "community"
