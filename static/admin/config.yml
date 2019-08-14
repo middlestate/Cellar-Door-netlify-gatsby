@@ -68,3 +68,22 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "community-page"}
           - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Page Title", name: "title", widget: "string"}
+          - {
+              label: Gallery,
+              name: gallery,
+              widget: object,
+              fields: [
+                {
+                  label: 'Gallery',
+                  name: gallery, 
+                  widget: list, 
+                  fields: [
+                    {
+                      label: Image, 
+                      name: image, 
+                      widget: image
+                    }
+                  ]
+                }
+              ]
+            }
