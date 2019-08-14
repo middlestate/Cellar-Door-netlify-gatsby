@@ -10,6 +10,7 @@ const CommunityPagePreview = ({ entry, getAsset }) => {
       <CommunityPageTemplate
         background_image={data.background_image}
         title={data.title}
+        gallery={data.gallery}
       />
     )
   } else {
