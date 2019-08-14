@@ -74,8 +74,8 @@ collections:
               widget: object,
               fields: [
                 {
-                  label: 'Gallery',
-                  name: gallery, 
+                  label: 'Images',
+                  name: images, 
                   widget: list, 
                   fields: [
                     {
