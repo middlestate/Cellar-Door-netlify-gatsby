@@ -2,6 +2,7 @@
 templateKey: community-page
 background_image: /img/main_background.png
 title: 'Community'
+menu: /img/SNV-Fundraiser-Sponsorship.pdf
 gallery:
   images:
     - image: /img/artists.jpg

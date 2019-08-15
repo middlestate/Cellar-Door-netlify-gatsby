@@ -12,6 +12,7 @@ import Layout from '../components/Layout'
 export const CommunityPageTemplate = ({
   background_image,
   title,
+  menu,
   gallery
 }) => (
   <main
@@ -49,6 +50,7 @@ export const CommunityPageTemplate = ({
     />
     </div>
     <h1 className="community-title">{title}</h1>
+    <embed src={menu} title="menu" style={{width:"100%", height:1500}} />  
     <div className="gallery-row">
       {gallery.images.map((gridItem, keys) => {
         return (
@@ -68,26 +70,27 @@ export const CommunityPageTemplate = ({
   </main>
 )
 
-CommunityPageTemplate.propTypes = {
-  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  gallery: PropTypes.shape({
-    images: PropTypes.array
-  })
-}
-
 const CommunityPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
   return (
     <Layout>
       <CommunityPageTemplate
         background_image={frontmatter.background_image}
         title={frontmatter.title}
+        menu={frontmatter.menu.publicURL}
         gallery={frontmatter.gallery}
       />
     </Layout>
   )
+}
+
+CommunityPageTemplate.propTypes = {
+  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  menu: PropTypes.string,
+  gallery: PropTypes.shape({
+    images: PropTypes.array
+  })
 }
 
 CommunityPage.propTypes = {
@@ -112,6 +115,9 @@ export const pageQuery = graphql`
           }    
         }
         title
+        menu {
+          publicURL
+        }
         gallery {
           images {
             image {
