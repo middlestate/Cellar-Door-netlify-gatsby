@@ -23,11 +23,13 @@ const Gallery = ({ gridItems }) => {
 }
 
 Gallery.propTypes = {
-  gridItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string
-    })
-  ),
+  gallery: PropTypes.shape({
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string
+      })
+    )
+  })
 }
 
 export default Gallery
