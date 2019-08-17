@@ -11,7 +11,7 @@ const CommunityPagePreview = ({ entry, getAsset }) => {
         background_image={data.background_image}
         title={data.title}
         menu={data.menu}
-        gallery={data.gallery}
+        gallery={data.gallery.images}
       />
     )
   } else {
