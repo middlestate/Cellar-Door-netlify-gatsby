@@ -73,18 +73,16 @@ collections:
               label: Gallery,
               name: gallery,
               widget: object,
-              fields: [
-                {
-                  label: 'Images',
-                  name: images, 
-                  widget: list, 
-                  fields: [
-                    {
-                      label: Image, 
-                      name: image, 
-                      widget: image
-                    }
-                  ]
-                }
-              ]
+              fields:
+                [
+                  {
+                    label: Images,
+                    name: images,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image }
+                      ],
+                  },
+                ],
             }
