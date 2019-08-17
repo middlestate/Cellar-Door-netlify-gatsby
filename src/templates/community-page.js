@@ -8,6 +8,7 @@ import { graphql } from 'gatsby'
 import '../components/community.sass'
 
 import Layout from '../components/Layout'
+import Gallery from '../components/Gallery'
 
 export const CommunityPageTemplate = ({
   background_image,
@@ -51,22 +52,7 @@ export const CommunityPageTemplate = ({
     </div>
     <h1 className="community-title">{title}</h1>
     <embed src={menu} title="menu" style={{width:"100%", height:1500}} />  
-    <div className="gallery-row">
-      {gallery.images.map((gridItem, keys) => {
-        return (
-          <div key={keys} className="gallery-column">
-            <img
-              src={
-                !!gridItem.image.childImageSharp
-                  ? gridItem.image.childImageSharp.fluid.src
-                  : gridItem.image
-              }
-              alt="artist image"
-            />
-          </div>
-        );
-      })}
-    </div>
+    <Gallery gridItems={gallery.images} />
   </main>
 )
 
