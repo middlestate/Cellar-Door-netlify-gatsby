@@ -8,22 +8,21 @@ const Gallery = ({ gridItems }) => {
         return (
           <div key={keys} className="gallery-column">
             <img
-              src={image}
+              src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}
+              alt="artists"
               alt="artist image"
             />
           </div>
-        );
+        )
       })}
     </div>
   )
 }
 
 Gallery.propTypes = {
-  gridItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string
-    })
-  ),
+  images: PropTypes.shape({
+    image: PropTypes.arrayOf(PropTypes.oneOf([PropTypes.object, PropTypes.string])),
+  }),
 }
 
 export default Gallery
