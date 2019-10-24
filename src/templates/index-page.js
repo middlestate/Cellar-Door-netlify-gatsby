@@ -8,55 +8,44 @@ import EventCards from '../components/EventCards'
 
 import Layout from '../components/Layout'
 
-export const IndexPageTemplate = ({
-  background_image,
-  image,
-  title,
-  description,
-  events_button_title,
-  artist_spotlight,
-  artist_name,
-  artist_image,
-  artist_description,
-  tickets_url,
-  artist_website,
-  spotify_playlist,
-  food_and_drinks_title,
-  food_and_drinks_description
-}) => (
+export const IndexPageTemplate = ({ background_image, logo, title, description, artist, food }) => (
   <main
     style={{
-      backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image}) no-repeat center center fixed`
-    }}>
-    <div
-    style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      height: '100vh',
-      width: '100vw',
-      backgroundColor: 'black',
-      zIndex: -10
+      backgroundImage: `url(${
+        !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
+      }) no-repeat center center fixed`,
     }}>
     <div
       style={{
         position: 'fixed',
-        height: '100%',
-        width: '100%',
-        backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
-        backgroundRepeat: 'none',
-        backgroundSize: 'cover',
-        zIndex: -5
-      }}
-    />
+        top: 0,
+        left: 0,
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: 'black',
+        zIndex: -10,
+      }}>
+      <div
+        style={{
+          position: 'fixed',
+          height: '100%',
+          width: '100%',
+          backgroundImage: `url(${
+            !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
+          })`,
+          backgroundRepeat: 'none',
+          backgroundSize: 'cover',
+          zIndex: -5,
+        }}
+      />
     </div>
     <div className="title-container">
-      <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="cellar door" />
+      <img src={!!logo.childImageSharp ? logo.childImageSharp.fluid.src : logo} alt="cellar door" />
     </div>
 
     <div className="upcoming-events">
       <div className="header">
-        <h3>{events_button_title}</h3>
+        <h3>upcoming events</h3>
         <Link to="/calendar">
           <button>All Events</button>
         </Link>
@@ -72,58 +61,70 @@ export const IndexPageTemplate = ({
       <p className="description">{description}</p>
       <Link to="/about">
         <button>About</button>
-      </Link>    
+      </Link>
     </div>
 
-    <hr/>
+    <hr />
 
     <div className="music-container">
       <div className="artist-container">
-        <h2 className="title">{artist_spotlight}</h2>
-        <img src={!!artist_image.childImageSharp ? artist_image.childImageSharp.fluid.src : artist_image} alt="artists" />
-        <h2 className="artist-name">{artist_name}</h2>
-        <h4 className="description">{artist_description}</h4>
-        <a href={tickets_url}>
+        <h2 className="title">Artist Spotlight</h2>
+        <img
+          src={!!artist.image.childImageSharp ? artist.image.childImageSharp.fluid.src : artist.image}
+          alt="artists"
+        />
+        <h2 className="artist-name">{artist.name}</h2>
+        <h4 className="description">{artist.description}</h4>
+        <a href={artist.tickets}>
           <button>Buy Tickets</button>
         </a>
-        <a href={artist_website}>
+        <a href={artist.website}>
           <button>Website</button>
         </a>
       </div>
       <div className="spotify-container">
-        <iframe src={spotify_playlist} title="playlist"  width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe
+          src={artist.spotify}
+          title="playlist"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allowtransparency="true"
+          allow="encrypted-media"></iframe>
       </div>
     </div>
 
-    <hr/>
+    <hr />
 
     <div className="food-and-drinks">
       <div className="header">
-        <h3>{food_and_drinks_title}</h3>
+        <h3>{food.title}</h3>
         <Link to="/foodpage">
           <button>Menus</button>
         </Link>
       </div>
-      <p className="description">{food_and_drinks_description}</p>      
+      <p className="description">{food.description}</p>
     </div>
   </main>
 )
 
 IndexPageTemplate.propTypes = {
   background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  events_button_title: PropTypes.string,
+  logo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
-  artist_spotlight: PropTypes.string,
-  artist_name: PropTypes.string,
-  artist_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  artist_description: PropTypes.string,
-  tickets_url: PropTypes.string,
-  artist_website: PropTypes.string,
-  spotify_playlist: PropTypes.string,
-  food_and_drinks_title: PropTypes.string,
-  food_and_drinks_description: PropTypes.string
+  artist: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    description: PropTypes.string,
+    website: PropTypes.string,
+    spotify: PropTypes.string,
+    tickets: PropTypes.string,
+  }),
+  food: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -133,19 +134,11 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         background_image={frontmatter.background_image}
-        image={frontmatter.image}
-        events_button_title={frontmatter.events_button_title}
+        logo={frontmatter.logo}
         title={frontmatter.title}
         description={frontmatter.description}
-        artist_spotlight={frontmatter.artist_spotlight}
-        artist_name={frontmatter.artist_name}
-        artist_image={frontmatter.artist_image}
-        artist_description={frontmatter.artist_description}
-        tickets_url={frontmatter.tickets_url}
-        artist_website={frontmatter.artist_website}
-        spotify_playlist={frontmatter.spotify_playlist}
-        food_and_drinks_title={frontmatter.food_and_drinks_title}
-        food_and_drinks_description={frontmatter.food_and_drinks_description}
+        artist={frontmatter.artist}
+        food={frontmatter.food}
       />
     </Layout>
   )
@@ -170,33 +163,35 @@ export const pageQuery = graphql`
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
-          }    
+          }
         }
-        image {
+        logo {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        events_button_title
         title
         description
-        artist_spotlight
-        artist_name
-        artist_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        artist {
+          name
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
+          description
+          website
+          spotify
+          tickets
         }
-        artist_description
-        tickets_url
-        artist_website
-        spotify_playlist
-        food_and_drinks_title
-        food_and_drinks_description
+        food {
+          title
+          description
+        }
       }
     }
   }
