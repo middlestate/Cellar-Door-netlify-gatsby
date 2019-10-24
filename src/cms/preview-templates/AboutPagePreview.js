@@ -11,18 +11,9 @@ const AboutPagePreview = ({ entry, getAsset }) => {
         background_image={data.background_image}
         title={data.title}
         description={data.description}
-        community={{
-          title: data.title,
-          blurbs: data.community.blurbs,
-        }}
-        culture={{
-          title: data.culture.title,
-          blurbs: data.community.blurbs,
-        }}
-        craft={{
-          title: data.craft.title,
-          blurbs: data.craft.blurbs,
-        }}
+        community={data.community}
+        culture={data.culture}
+        craft={data.craft}
       />
     )
   }
