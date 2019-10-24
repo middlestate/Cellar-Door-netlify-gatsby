@@ -12,18 +12,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         logo={data.logo}
         title={data.title}
         description={data.description}
-        artist={{
-          name: data.artist.name,
-          image: data.arist.image,
-          description: data.artist.description,
-          website: data.artist.website,
-          spotify: data.artist.spotify,
-          tickets: data.artist.tickets,
-        }}
-        food={{
-          title: data.food.title,
-          description: data.food.description,
-        }}
+        artist={data.artist}
+        food={data.food}
       />
     )
   }
