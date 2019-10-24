@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import DoorIcon from '../img/dooricon.png'
 
 const Navbar = () => {
   return (
@@ -8,11 +9,21 @@ const Navbar = () => {
         <label htmlFor="toggle">&#9776;</label>
         <input type="checkbox" id="toggle" />
         <div className="menu">
-          <Link to="/community" className="nav-item community">Community</Link>
-          <Link to="/about" className="nav-item about-us">About Us</Link>
-          <Link to="/" className="cellar-door-icon"><img src="img/dooricon.png" alt="door_icon" /></Link>
-          <Link to="/calendar" className="nav-item calendar">Calendar</Link>
-          <Link to="/foodpage" className="nav-item fd">Food & Drink</Link>
+          <Link to="/community" className="nav-item community">
+            Community
+          </Link>
+          <Link to="/about" className="nav-item about-us">
+            About Us
+          </Link>
+          <Link to="/" className="cellar-door-icon">
+            <img src={DoorIcon} alt="door_icon" />
+          </Link>
+          <Link to="/calendar" className="nav-item calendar">
+            Calendar
+          </Link>
+          <Link to="/foodpage" className="nav-item fd">
+            Food & Drink
+          </Link>
         </div>
       </div>
     </header>
