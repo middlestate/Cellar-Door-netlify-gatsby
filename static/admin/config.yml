@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: working-master
+  branch: panic-master
 
 media_folder: static/img
 public_folder: /img
@@ -15,39 +15,23 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Background Image", name: "background_image", widget: image}
-          - {label: "Title Image", name: "image", widget: image}
-          - {label: "Upcoming Events Section Title", name: "events_button_title", widget: "string"}
+          - {label: Logo, name: logo, widget: image}
           - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Heading Description", name: "description", widget: "text"}
-          - {label: "Artist Section Title", name: "artist_spotlight", widget: "string"}
-          - {label: "Artist Image", name: "artist_image", widget: image}
-          - {label: "Artist Name", name: "artist_name", widget: "string"}
-          - {label: "Artist Description", name: "artist_description", widget: "string"}
-          - {label: "Tickets Link", name: "tickets_url", widget: "string"}
-          - {label: "Artist Website", name: "artist_website", widget: "string"}
-          - {label: "Playlist", name: "spotify_playlist", widget: "string"}
-          - {label: "Food Section Title", name: "food_and_drinks_title", widget: "string"}
-          - {label: "Food Section Description", name: "food_and_drinks_description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Artist", name: "artist", widget: object, fields: [{label: "Artist Name", name: name, widget: string}, {label: Image, name: image, widget: image}, {label: Description, name: description, widget: string}, {label: Website, name: website, widget: string}, {label: Spotify, name: spotify, widget: string}, label: "Tickets URL", name: tickets, widget: string]}
+          - {label: Food, name: food, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget:  text}]}
       - file: "src/pages/about.md"
         label: "About Page"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Background Image", name: "background_image", widget: image}
-          - {label: "Page Title", name: "about_title", widget: "string"}
-          - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Heading Description", name: "description", widget: "text"}
-          - {label: "Community Section Title", name: "community_title", widget: "string"}
-          - {label: "Community Paragraph 1", name: "community_description_p1", widget: "text"}
-          - {label: "Community Paragraph 2", name: "community_description_p2", widget: "text"}
-          - {label: "Community Paragraph 3", name: "community_description_p3", widget: "text"}
-          - {label: "Culture Section Title", name: "culture_title", widget: "string"}
-          - {label: "Culture Paragraph 1", name: "culture_description_p1", widget: "text"}
-          - {label: "Culture Paragraph 2", name: "culture_description_p2", widget: "text"}
-          - {label: "Craft Section Title", name: "craft_title", widget: "string"}
-          - {label: "Craft Paragraph 1", name: "craft_description_p1", widget: "text"}
-          - {label: "Craft Paragraph 2", name: "craft_description_p2", widget: "text"}
-          - {label: "Craft Paragraph 3", name: "craft_description_p3", widget: "text"}
+          - {label: "Background Image", name: "image", widget: image}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Community", name: "community", widget: object, fields: [{label: Title, name: title, widget: string, default: Community}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Text, name: text, widget: text}]}]}
+          - {label: "Culture", name: "culture", widget: object, fields: [{label: Title, name: title, widget: string, default: Culture}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Text, name: text, widget: text}]}]}
+          - {label: "Craft", name: "craft", widget: object, fields: [{label: Title, name: title, widget: string, default: Craft}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Text, name: text, widget: text}]}]}
+         
       - file: "src/pages/calendar.md"
         label: "Calendar Page"
         name: "calendar"
