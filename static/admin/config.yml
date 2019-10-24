@@ -25,7 +25,7 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Background Image", name: "image", widget: image}
+          - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
           - {label: "Community", name: "community", widget: object, fields: [{label: Title, name: title, widget: string, default: Community}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Text, name: text, widget: text}]}]}
