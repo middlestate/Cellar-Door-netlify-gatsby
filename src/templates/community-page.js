@@ -1,40 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Document, Page } from 'react-pdf'
 
 // Note: Link component is only used for internal links. External links use <a></a>
 
 import '../components/community.sass'
 import Layout from '../components/Layout'
 import Gallery from '../components/Gallery'
-
-class PDF extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      numPages: null,
-      pageNumber: 1,
-    }
-  }
-
-  onDocumentLoadSuccess = ({ numPages }) => {
-    this.setState({ numPages })
-  }
-
-  render() {
-    const { pageNumber, numPages } = this.state
-    const { pdf } = this.props
-
-    return (
-      <div>
-        <Document file={pdf} onLoadSuccess={this.onDocumentLoadSuccess}>
-          <Page pageNumber={pageNumber} />
-        </Document>
-      </div>
-    )
-  }
-}
+import PDF from '../components/PDF'
 
 export const CommunityPageTemplate = ({ background_image, title, menu, gallery }) => (
   <main
@@ -69,7 +42,9 @@ export const CommunityPageTemplate = ({ background_image, title, menu, gallery }
     </div>
     <h1 className="community-title">{title}</h1>
     {/* <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} /> */}
-    <PDF pdf={menu} />
+    <div className="pdf-container">
+      <PDF pdf={menu} />    
+    </div>
     <Gallery gridItems={gallery.images} />
   </main>
 )
