@@ -121,7 +121,7 @@ IndexPageTemplate.propTypes = {
     description: PropTypes.string,
     website: PropTypes.string,
     spotify: PropTypes.string,
-    tickets: PropTypes.string,
+    // tickets: PropTypes.string,
   }),
   food: PropTypes.shape({
     title: PropTypes.string,
@@ -188,7 +188,6 @@ export const pageQuery = graphql`
           description
           website
           spotify
-          tickets
         }
         food {
           title
