@@ -102,26 +102,6 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
               <div className="dot"></div>
             </div>
           </div>
-
-        </div>
-      </div>
-      <div className="item">
-        <div className="dot-square">
-          <div className="row">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
-          <div className="row">
-            <div className="dot invisible-dot"></div>
-            <div className="dot"></div>
-            <div className="dot invisible-dot"></div>
-          </div>
-          <div className="row">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
         </div>
       </div>
     </div>
