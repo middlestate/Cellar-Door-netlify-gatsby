@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Friday, July 19, 2019 @ Cellar Door'
-  image: /img/vq.jpg
-  name: Truxton Mile
-  spotify: 'https://open.spotify.com/embed/artist/1o2oLRSKlPBVWKTQjfpNH5'
-  tickets: 'https://www.snvfoundation.org/details.php?id=1388'
-  website: 'https://www.truxtonmile.com/'
+  description: 'Friday, October 25, 2019 @ Cellar Door'
+  image: /img/south-65.jpg
+  name: South 65
+  spotify: 'https://www.youtube.com/embed/kC12SIh2icc'
+  tickets: 'https://www.facebook.com/events/699612443874764/'
+  website: 'https://www.facebook.com/events/699612443874764/'
 food:
   title: Food & Drinks
   description: >-
@@ -23,3 +23,4 @@ food:
     light on creators of all kinds - we are here to celebrate our community with
     you.
 ---
+
