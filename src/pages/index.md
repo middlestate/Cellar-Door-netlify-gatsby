@@ -13,7 +13,7 @@ artist:
   image: /img/south-65.jpg
   name: South 65
   spotify: 'https://www.youtube.com/embed/kC12SIh2icc'
-  tickets: 'https://www.facebook.com/events/699612443874764/'
+  # tickets: 'https://www.facebook.com/events/699612443874764/'
   website: 'https://www.facebook.com/events/699612443874764/'
 food:
   title: Food & Drinks

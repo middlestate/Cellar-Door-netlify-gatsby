@@ -75,9 +75,11 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
         />
         <h2 className="artist-name">{artist.name}</h2>
         <h4 className="description">{artist.description}</h4>
-        <a href={artist.tickets}>
-          <button>Buy Tickets</button>
-        </a>
+        {/**
+          <a href={artist.tickets}>
+            <button>Buy Tickets</button>
+          </a>        
+        */}
         <a href={artist.website}>
           <button>Website</button>
         </a>
