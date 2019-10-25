@@ -1,4 +1,3 @@
----
 templateKey: index-page
 background_image: /img/main_background.png
 logo: /img/logo.png
@@ -22,5 +21,3 @@ food:
     food, music, and art. Not afraid to explore new territories and shine the
     light on creators of all kinds - we are here to celebrate our community with
     you.
----
-

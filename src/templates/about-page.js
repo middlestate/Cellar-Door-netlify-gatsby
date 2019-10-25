@@ -102,32 +102,52 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
               <div className="dot"></div>
             </div>
           </div>
+
         </div>
       </div>
-      <div className="row">
-        <div className="item">
-          <div className="circle">
+      <div className="item">
+        <div className="dot-square">
+          <div className="row">
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
+          </div>
+          <div className="row">
+            <div className="dot invisible-dot"></div>
             <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
+            <div className="dot invisible-dot"></div>
+          </div>
+          <div className="row">
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
           </div>
         </div>
-        <div className="item">
-          <h2 className="title">{craft.title}</h2>
-          <div className="description">
-            {craft.blurbs.map(({ text }, i) => (
-              <p>{text}</p>
-            ))}
-          </div>
+      </div>
+    </div>
+    <div className="row">
+      <div className="item">
+        <div className="circle">
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+        </div>
+      </div>
+      <div className="item">
+        <h2 className="title">{craft.title}</h2>
+        <div className="description">
+          {craft.blurbs.map(({ text }, i) => (
+            <p>{text}</p>
+          ))}
         </div>
       </div>
     </div>
