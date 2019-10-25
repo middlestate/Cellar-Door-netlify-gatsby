@@ -40,8 +40,7 @@ export const CommunityPageTemplate = ({ background_image, title, menu, gallery }
       />
     </div>
     <h1 className="community-title">{title}</h1>
-    {/* <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} /> */}
-    <iframe src={menu} width="100%" height="1200"></iframe>
+    <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} />
     <Gallery gridItems={gallery.images} />
   </main>
 )

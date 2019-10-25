@@ -30,7 +30,7 @@ export const FoodPageTemplate = ({ menu }) => (
         }}
       />
     </div>
-    <iframe src={menu} width="100%" height="1200"></iframe>
+    <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} />
   </main>
 )
 
