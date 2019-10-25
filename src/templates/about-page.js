@@ -75,32 +75,32 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
           </div>
         </div>
       </div>
-    </div>
-    <div className="row middle-row">
-      <div className="item">
-        <h2 className="title">{culture.title}</h2>
-        <div className="description">
-          {culture.blurbs.map(({ text }, i) => (
-            <p>{text}</p>
-          ))}
+      <div className="row middle-row">
+        <div className="item">
+          <h2 className="title">{culture.title}</h2>
+          <div className="description">
+            {culture.blurbs.map(({ text }, i) => (
+              <p>{text}</p>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="item">
-        <div className="dot-square">
-          <div className="row">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
-          <div className="row">
-            <div className="dot invisible-dot"></div>
-            <div className="dot"></div>
-            <div className="dot invisible-dot"></div>
-          </div>
-          <div className="row">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
+        <div className="item">
+          <div className="dot-square">
+            <div className="row">
+              <div className="dot"></div>
+              <div className="dot"></div>
+              <div className="dot"></div>
+            </div>
+            <div className="row">
+              <div className="dot invisible-dot"></div>
+              <div className="dot"></div>
+              <div className="dot invisible-dot"></div>
+            </div>
+            <div className="row">
+              <div className="dot"></div>
+              <div className="dot"></div>
+              <div className="dot"></div>
+            </div>
           </div>
         </div>
       </div>
