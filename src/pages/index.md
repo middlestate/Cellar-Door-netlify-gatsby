@@ -13,7 +13,6 @@ artist:
   image: /img/daze-baby.jpg
   name: Daze Baby
   spotify: 'https://www.youtube.com/embed/kC12SIh2icc'
-  tickets: 'https://www.facebook.com/events/486611282067395/'
   website: 'https://www.facebook.com/events/486611282067395/'
 food:
   title: Food & Drinks
