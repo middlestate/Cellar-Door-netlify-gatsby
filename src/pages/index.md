@@ -12,7 +12,9 @@ artist:
   description: 'Friday, November 1, 2019 @ Cellar Door'
   image: /img/daze-baby.jpg
   name: Daze Baby
-  spotify: 'https://www.youtube.com/embed/kC12SIh2icc'
+  spotify: >-
+    https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/194482399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true
+  tickets: '#'
   website: 'https://www.facebook.com/events/486611282067395/'
 food:
   title: Food & Drinks
