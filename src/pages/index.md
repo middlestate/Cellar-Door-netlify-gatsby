@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Friday, October 25, 2019 @ Cellar Door'
-  image: /img/south-65.jpg
-  name: South 65
+  description: 'Friday, November 1, 2019 @ Cellar Door'
+  image: /img/daze-baby.jpg
+  name: Daze Baby
   spotify: 'https://www.youtube.com/embed/kC12SIh2icc'
-  # tickets: 'https://www.facebook.com/events/699612443874764/'
-  website: 'https://www.facebook.com/events/699612443874764/'
+  tickets: 'https://www.facebook.com/events/486611282067395/'
+  website: 'https://www.facebook.com/events/486611282067395/'
 food:
   title: Food & Drinks
   description: >-
