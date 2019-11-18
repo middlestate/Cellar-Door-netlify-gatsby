@@ -35,6 +35,7 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
           })`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
+          backgroundPosition: 'center',
           zIndex: -5,
         }}
       />

@@ -36,6 +36,7 @@ export const CommunityPageTemplate = ({ background_image, title, menu, gallery }
           })`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
+          backgroundPosition: 'center',
           zIndex: -5,
         }}
       />
