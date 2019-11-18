@@ -75,9 +75,6 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
         />
         <h2 className="artist-name">{artist.name}</h2>
         <h4 className="description">{artist.description}</h4>
-        <a href={artist.tickets}>
-          <button>Buy Tickets</button>
-        </a>
         <a href={artist.website}>
           <button>Website</button>
         </a>
@@ -118,8 +115,7 @@ IndexPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     description: PropTypes.string,
     website: PropTypes.string,
-    spotify: PropTypes.string,
-    tickets: PropTypes.string,
+    spotify: PropTypes.string
   }),
   food: PropTypes.shape({
     title: PropTypes.string,
@@ -186,7 +182,6 @@ export const pageQuery = graphql`
           description
           website
           spotify
-          tickets
         }
         food {
           title

@@ -7,6 +7,7 @@ import { graphql } from 'gatsby'
 import '../components/community.sass'
 import Layout from '../components/Layout'
 import Gallery from '../components/Gallery'
+import PDF from '../components/PDF'
 
 export const CommunityPageTemplate = ({ background_image, title, menu, gallery }) => (
   <main
@@ -40,7 +41,10 @@ export const CommunityPageTemplate = ({ background_image, title, menu, gallery }
       />
     </div>
     <h1 className="community-title">{title}</h1>
-    <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} />
+    {/* <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} /> */}
+    <div className="pdf-container">
+      <PDF pdf={menu} />    
+    </div>
     <Gallery gridItems={gallery.images} />
   </main>
 )

@@ -1,4 +1,5 @@
 ---
 templateKey: foodpage
-menu: /img/menu.pdf
+menu: /img/menu-merged.pdf
 ---
+

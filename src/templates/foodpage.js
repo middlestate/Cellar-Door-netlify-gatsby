@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+import PDF from '../components/PDF'
+
 export const FoodPageTemplate = ({ menu }) => (
   <main
     style={{
@@ -30,7 +32,9 @@ export const FoodPageTemplate = ({ menu }) => (
         }}
       />
     </div>
-    <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} />
+    <div className="pdf-container">
+      <PDF pdf={menu} />    
+    </div>
   </main>
 )
 
