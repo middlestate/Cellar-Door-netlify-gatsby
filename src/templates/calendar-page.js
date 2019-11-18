@@ -36,6 +36,7 @@ export const CalendarPageTemplate = ({
         backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
         backgroundRepeat: 'none',
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         zIndex: -5
       }}
     />

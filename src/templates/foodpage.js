@@ -28,6 +28,7 @@ export const FoodPageTemplate = ({ menu }) => (
           backgroundImage: `url("../img/main_background.png")`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
+          backgroundPosition: 'center',
           zIndex: -5,
         }}
       />

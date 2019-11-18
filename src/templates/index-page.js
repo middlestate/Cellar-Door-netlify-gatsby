@@ -35,6 +35,7 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
           })`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
+          backgroundPosition: 'center',
           zIndex: -5,
         }}
       />
