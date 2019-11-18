@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-import PDF from '../components/PDF'
+import PDFrender from '../components/PDFrender'
 
 export const FoodPageTemplate = ({ menu }) => (
   <main
@@ -34,7 +34,7 @@ export const FoodPageTemplate = ({ menu }) => (
       />
     </div>
     <div className="pdf-container">
-      <PDF pdf={menu} />    
+      <PDFrender pdf={menu} />    
     </div>
   </main>
 )
