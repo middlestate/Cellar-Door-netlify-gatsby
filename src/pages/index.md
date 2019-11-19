@@ -12,7 +12,7 @@ artist:
   description: 'Friday, November 29 @ 8PM'
   image: /img/leaving_austin.png
   name: Leaving Austin
-  spotify: 'https://open.spotify.com/artist/67igAZjBrO42dnYYbTT6WI'
+  spotify: 'https://open.spotify.com/embed/artist/67igAZjBrO42dnYYbTT6WI'
   tickets: 'https://www.universe.com/embed2/events/leaving-austin-tickets-9BTJDR'
   website: 'https://leavingaustinband.com/'
 food:
