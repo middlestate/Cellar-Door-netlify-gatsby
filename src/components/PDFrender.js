@@ -30,10 +30,11 @@ class PDFrender extends React.Component {
     const { pdf } = this.props
 
     return (
-      <div>
+      <div className="pdf-render-container">
         <Document file={pdf} onLoadSuccess={this.onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
         </Document>
+        <div className="pageNumber">{'Page ' + ' ' + pageNumber + ' ' + ' / ' + numPages }</div>
         <div className="pdf-buttons-container">
           <button onClick={pageNumber > 1 ? this.handlePrevious : null}>&lt;</button>
           <a href={pdf} download>
