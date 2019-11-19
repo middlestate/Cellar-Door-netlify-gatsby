@@ -9,6 +9,7 @@ const FoodPagePreview = ({ entry,getAsset }) => {
     return (
       <FoodPageTemplate 
         title={data.title}
+        pdf_title={data.pdf_title}
         menu={data.menu}
       />
     )
