@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 import PDFrender from '../components/PDFrender'
 
-export const FoodPageTemplate = ({ menu }) => (
+export const FoodPageTemplate = ({ title, menu }) => (
   <main
     style={{
       backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`,
@@ -33,6 +33,7 @@ export const FoodPageTemplate = ({ menu }) => (
         }}
       />
     </div>
+    <h1 className="food-title">{title}</h1>
     <div className="pdf-container">
       <PDFrender pdf={menu} />    
     </div>
@@ -43,13 +44,17 @@ const FoodPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-      <FoodPageTemplate menu={frontmatter.menu.publicURL} />
+      <FoodPageTemplate 
+        title={frontmatter.title}
+        menu={frontmatter.menu.publicURL}
+      />
     </Layout>
   )
 }
 
 FoodPageTemplate.propTypes = {
-  menu: PropTypes.string,
+  title: PropTypes.string,
+  menu: PropTypes.string
 }
 
 FoodPage.propTypes = {
@@ -66,6 +71,7 @@ export const pageQuery = graphql`
   query FoodPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "foodpage" } }) {
       frontmatter {
+        title
         menu {
           publicURL
         }
