@@ -4,7 +4,7 @@ background_image: /img/main_background.png
 title: Community
 pdf_title: Flyer
 pdf_filename: coming_soon
-menu: /img/coming-soon.pdf
+menu: /img/sample.pdf
 section_title: Gallery
 gallery:
   images:
