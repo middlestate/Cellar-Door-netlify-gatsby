@@ -64,8 +64,8 @@ class PDFrender extends React.Component {
             </div>
           </div>
         ) : (
-          <div>
-            <h3 pdf_filename={pdf_filename}>{pdf_filename}</h3>
+          <div className="pdf-mobile-only">
+            <h3 className="pdf_filename" pdf_filename={pdf_filename}>{pdf_filename}</h3>
             <a href={pdf} download>
               <button>Download</button>
             </a>

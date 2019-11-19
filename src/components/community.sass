@@ -6,11 +6,14 @@
   text-align: center 
   margin: 15% 15% 30% 15%
 
+.pdf-mobile-only
+  padding: 50px
+  border: 2px solid white
+
 .pdf-title, .gallery-title
   font-family: Gilroy-SemiBold
   letter-spacing: 2px  
   font-size: 40px
-  text-align: left
   margin-left: 20%
 
 .pdf-title
@@ -24,7 +27,6 @@
   display: flex
   align-items: center
   justify-content: center
- 
 
 /* Create four equal columns that sits next to each other */
 .gallery-column  
@@ -54,6 +56,22 @@
   box-pack: center
   box-align: center
 
+@media only screen and (min-width: 20px)  
+  .pdf-title
+    text-align: center
+    margin-left: 0
+
+  .gallery-title
+    text-align: center
+    margin-left: 0
+
+@media only screen and (min-width: 768px)  
+  .pdf-title
+    text-align: left
+
+  .gallery-title
+  text-align: left
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px)  
   .gallery-column  
@@ -71,3 +89,4 @@
   .community-title
     font-size: 40px 
     margin: 1% 
+
