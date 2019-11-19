@@ -35,6 +35,9 @@ class PDFrender extends React.Component {
           <Page pageNumber={pageNumber} />
         </Document>
         <button onClick={pageNumber > 1 ? this.handlePrevious : null}>&lt;</button>
+        <a href={pdf} download>
+          <button>Download</button>
+        </a>
         <button onClick={pageNumber < numPages ? this.handleNext : null}>&gt;</button>
       </div>
     )
