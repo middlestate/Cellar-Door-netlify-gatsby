@@ -3,6 +3,7 @@ templateKey: community-page
 background_image: /img/main_background.png
 title: Community
 menu: /img/coming-soon.pdf
+section_title: Gallery
 gallery:
   images:
     - image: /img/artists.jpg

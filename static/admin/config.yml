@@ -53,4 +53,5 @@ collections:
           - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/SNV-Fundraiser-Sponsorship.pdf"}
+          - {label: "Section Title", name: "section_title", widget: "string"}
           - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: images, widget: list, fields:[{label: Image, name: image, widget: image}]}]}

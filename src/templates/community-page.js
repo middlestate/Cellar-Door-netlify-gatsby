@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 import Gallery from '../components/Gallery'
 import PDFrender from '../components/PDFrender'
 
-export const CommunityPageTemplate = ({ background_image, title, menu, gallery }) => (
+export const CommunityPageTemplate = ({ background_image, title, menu, section_title, gallery }) => (
   <main
     style={{
       backgroundImage: `url(${
@@ -46,6 +46,7 @@ export const CommunityPageTemplate = ({ background_image, title, menu, gallery }
     <div className="pdf-container">
       <PDFrender pdf={menu} />    
     </div>
+    <h2 className="gallery-title">{section_title}</h2>
     <Gallery gridItems={gallery.images} />
   </main>
 )
@@ -58,6 +59,7 @@ const CommunityPage = ({ data }) => {
         background_image={frontmatter.background_image}
         title={frontmatter.title}
         menu={frontmatter.menu.publicURL}
+        section_title={frontmatter.section_title}
         gallery={frontmatter.gallery}
       />
     </Layout>
@@ -68,6 +70,7 @@ CommunityPageTemplate.propTypes = {
   background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   menu: PropTypes.string,
+  section_title: PropTypes.string,
   gallery: PropTypes.shape({
     images: PropTypes.array,
   }),
@@ -98,6 +101,7 @@ export const pageQuery = graphql`
         menu {
           publicURL
         }
+        section_title
         gallery {
           images {
             image {
