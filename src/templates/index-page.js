@@ -79,6 +79,9 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
         <a href={artist.website}>
           <button>Website</button>
         </a>
+        <a href={artist.tickets}>
+          <button>Tickets</button>
+        </a>
       </div>
       <div className="spotify-container">
         <iframe
