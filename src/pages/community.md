@@ -2,6 +2,7 @@
 templateKey: community-page
 background_image: /img/main_background.png
 title: Community
+pdf_title: Flyer
 menu: /img/coming-soon.pdf
 section_title: Gallery
 gallery:

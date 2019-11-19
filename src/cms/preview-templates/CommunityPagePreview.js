@@ -4,7 +4,6 @@ import { CommunityPageTemplate } from '../../templates/community-page'
 
 const CommunityPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
-
   const entryImages = entry.getIn(['data', 'gallery', 'images'])
   const images = entryImages ? entryImages.toJS() : []
 
@@ -13,6 +12,7 @@ const CommunityPagePreview = ({ entry, getAsset }) => {
       <CommunityPageTemplate
         background_image={data.background_image}
         title={data.title}
+        pdf_title={data.pdf_title}
         menu={data.menu}
         section_title={data.section_title}
         gallery={{ images }}
