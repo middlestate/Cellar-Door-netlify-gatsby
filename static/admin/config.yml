@@ -46,6 +46,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "foodpage"}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "PDF Title", name: "pdf_title", widget: "string"}
+          - {label: "PDF Filename (without .pdf)", name: "pdf_filename", widget: "string"}
           - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/menu.pdf"}
       - file: "src/pages/community.md"
         label: "Community Page"
@@ -55,6 +56,7 @@ collections:
           - {label: "Background Image", name: "background_image", widget: image}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "PDF Title", name: "pdf_title", widget: "string"}
+          - {label: "PDF Filename (without .pdf)", name: "pdf_filename", widget: "string"}
           - {label: 'PDF', name: menu, widget: file, default: "src/img/SNV-Fundraiser-Sponsorship.pdf"}
           - {label: "Section Title", name: "section_title", widget: "string"}
           - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: images, widget: list, fields:[{label: Image, name: image, widget: image}]}]}

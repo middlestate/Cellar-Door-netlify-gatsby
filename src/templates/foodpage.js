@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 import PDFrender from '../components/PDFrender'
 
-export const FoodPageTemplate = ({ title, pdf_title, menu }) => (
+export const FoodPageTemplate = ({ title, pdf_title, pdf_filename, menu }) => (
   <main
     style={{
       backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`,
@@ -36,7 +36,7 @@ export const FoodPageTemplate = ({ title, pdf_title, menu }) => (
     <h1 className="food-title">{title}</h1>
     <h2 className="pdf-title">{pdf_title}</h2>
     <div className="pdf-container">
-      <PDFrender pdf={menu} />    
+      <PDFrender pdf={menu} pdf_filename={pdf_filename} />    
     </div>
   </main>
 )
@@ -48,6 +48,7 @@ const FoodPage = ({ data }) => {
       <FoodPageTemplate 
         title={frontmatter.title}
         pdf_title={frontmatter.pdf_title}
+        pdf_filename={frontmatter.pdf_filename}
         menu={frontmatter.menu.publicURL}
       />
     </Layout>
@@ -57,6 +58,7 @@ const FoodPage = ({ data }) => {
 FoodPageTemplate.propTypes = {
   title: PropTypes.string,
   pdf_title: PropTypes.string,
+  pdf_filename: PropTypes.string,
   menu: PropTypes.string
 }
 
@@ -76,6 +78,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         pdf_title
+        pdf_filename
         menu {
           publicURL
         }
