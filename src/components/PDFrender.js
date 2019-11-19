@@ -18,15 +18,11 @@ class PDFrender extends React.Component {
   }
 
   handlePrevious = () => {
-    if(this.state.pageNumber > 1){
-      this.setState({ pageNumber: this.state.pageNumber - 1 })      
-    }
+    this.setState({ pageNumber: this.state.pageNumber - 1 })
   }
 
-  handleNext = () => {
-    if(this.state.pageNumber + 1 !== null) {
-      this.setState({ pageNumber: this.state.pageNumber + 1 })      
-    }
+  handleNext = (numPages) => {
+    this.setState({ pageNumber: this.state.pageNumber + 1 })
   }
 
   render() {
@@ -38,8 +34,8 @@ class PDFrender extends React.Component {
         <Document file={pdf} onLoadSuccess={this.onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
         </Document>
-        <button onClick={this.handlePrevious}>&lt;</button>
-        <button onClick={this.handleNext}>&gt;</button>
+        <button onClick={pageNumber > 1 ? this.handlePrevious : null}>&lt;</button>
+        <button onClick={pageNumber < numPages ? this.handleNext : null}>&gt;</button>
       </div>
     )
   }
