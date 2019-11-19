@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 import Gallery from '../components/Gallery'
 import PDFrender from '../components/PDFrender'
 
-export const CommunityPageTemplate = ({ background_image, title, menu, section_title, gallery }) => (
+export const CommunityPageTemplate = ({ background_image, title, pdf_title, menu, section_title, gallery }) => (
   <main
     style={{
       backgroundImage: `url(${
@@ -42,7 +42,7 @@ export const CommunityPageTemplate = ({ background_image, title, menu, section_t
       />
     </div>
     <h1 className="community-title">{title}</h1>
-    {/* <embed src={menu} title="menu" type="application/pdf" style={{ width: '100%', height: 1500 }} /> */}
+    <h2 className="pdf-title">{pdf_title}</h2>
     <div className="pdf-container">
       <PDFrender pdf={menu} />    
     </div>
@@ -58,6 +58,7 @@ const CommunityPage = ({ data }) => {
       <CommunityPageTemplate
         background_image={frontmatter.background_image}
         title={frontmatter.title}
+        pdf_title={frontmatter.pdf_title}
         menu={frontmatter.menu.publicURL}
         section_title={frontmatter.section_title}
         gallery={frontmatter.gallery}
@@ -69,6 +70,7 @@ const CommunityPage = ({ data }) => {
 CommunityPageTemplate.propTypes = {
   background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
+  pdf_title: PropTypes.string,
   menu: PropTypes.string,
   section_title: PropTypes.string,
   gallery: PropTypes.shape({
@@ -98,6 +100,7 @@ export const pageQuery = graphql`
           }
         }
         title
+        pdf_title
         menu {
           publicURL
         }

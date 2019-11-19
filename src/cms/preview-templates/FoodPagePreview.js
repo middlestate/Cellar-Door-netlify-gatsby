@@ -8,6 +8,7 @@ const FoodPagePreview = ({ entry,getAsset }) => {
   if(data) {
     return (
       <FoodPageTemplate 
+        title={data.title}
         menu={data.menu}
       />
     )
