@@ -185,6 +185,7 @@ export const pageQuery = graphql`
           }
           description
           website
+          tickets
           spotify
         }
         food {
