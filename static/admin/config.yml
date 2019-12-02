@@ -47,7 +47,13 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "PDF Title", name: "pdf_title", widget: "string"}
           - {label: "PDF Filename (without .pdf)", name: "pdf_filename", widget: "string"}
-          - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/menu.pdf"}
+          - label: "Menu"
+            name: "menu"
+            widget: "file"
+            default: "/static/pdf/menu.pdf"
+            media_library:
+              config:
+                multiple: true
       - file: "src/pages/community.md"
         label: "Community Page"
         name: "community"
