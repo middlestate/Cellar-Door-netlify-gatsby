@@ -47,7 +47,13 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "PDF Title", name: "pdf_title", widget: "string"}
           - {label: "PDF Filename (without .pdf)", name: "pdf_filename", widget: "string"}
-          - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/menu.pdf"}
+          - label: "Menu"
+            name: "menu"
+            widget: "file"
+            default: "/static/pdf/menu.pdf"
+            media_library:
+              config:
+                multiple: true
       - file: "src/pages/community.md"
         label: "Community Page"
         name: "community"
@@ -57,6 +63,12 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "PDF Title", name: "pdf_title", widget: "string"}
           - {label: "PDF Filename (without .pdf)", name: "pdf_filename", widget: "string"}
-          - {label: 'Manual PDF', name: menu, widget: file, default: "src/img/menu.pdf"}
+          - label: "Flyer"
+            name: "menu"
+            widget: "file"
+            default: "/static/img/sample.pdf"
+            media_library:
+              config:
+                multiple: true
           - {label: "Section Title", name: "section_title", widget: "string"}
           - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: images, widget: list, fields:[{label: Image, name: image, widget: image}]}]}
