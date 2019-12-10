@@ -6,10 +6,9 @@ import { graphql } from 'gatsby'
 
 import '../components/community.sass'
 import Layout from '../components/Layout'
-import Gallery from '../components/Gallery'
 import PDFrender from '../components/PDFrender'
 
-export const CommunityPageTemplate = ({ background_image, title, pdf_title, pdf_filename, menu, section_title, gallery }) => (
+export const CommunityPageTemplate = ({ gallery, background_image, title, pdf_title, pdf_filename, menu, section_title }) => (
   <main
     style={{
       backgroundImage: `url(${
@@ -47,7 +46,15 @@ export const CommunityPageTemplate = ({ background_image, title, pdf_title, pdf_
       <PDFrender pdf={menu} pdf_filename={pdf_filename} />    
     </div>
     <h2 className="gallery-title">{section_title}</h2>
-    <Gallery gridItems={gallery.images} />
+    <div className="gallery-row">
+      {gallery.map(({ image }, keys) => {
+        return (
+          <div key={keys} className="gallery-column">
+            <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="artist" />
+          </div>
+        )
+      })}
+    </div>
   </main>
 )
 
@@ -62,7 +69,7 @@ const CommunityPage = ({ data }) => {
         pdf_title={frontmatter.pdf_title}
         menu={frontmatter.menu.publicURL}
         section_title={frontmatter.section_title}
-        gallery={frontmatter.gallery}
+        gallery={frontmatter.gallery.images}
       />
     </Layout>
   )
@@ -76,7 +83,7 @@ CommunityPageTemplate.propTypes = {
   menu: PropTypes.string,
   section_title: PropTypes.string,
   gallery: PropTypes.shape({
-    images: PropTypes.array,
+    images: PropTypes.arrayOf(PropTypes.oneOf([PropTypes.object, PropTypes.string])),
   }),
 }
 
