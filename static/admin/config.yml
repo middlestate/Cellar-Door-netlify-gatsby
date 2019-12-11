@@ -71,4 +71,4 @@ collections:
               config:
                 multiple: true
           - {label: "Section Title", name: "section_title", widget: "string"}
-          - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: images, widget: list, fields:[{label: Image, name: image, widget: image, default: "/static/img/placeholder.jpg", media_library:config:multiple: true}]}]}
+          - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: images, widget: list, fields:[{label: Image, name: image, widget: image, default: /static/img/placeholder.jpg, media_library:config:multiple: true}]}]}
