@@ -7,6 +7,7 @@ const Gallery = ({ gridItems }) => {
       {gridItems.map(({ image }, keys) => {
         return (
           <div key={keys} className="gallery-column">
+            {console.log(image)}
             <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt="artist" />
           </div>
         )
