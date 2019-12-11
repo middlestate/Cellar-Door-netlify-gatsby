@@ -75,11 +75,11 @@ collections:
             name: gallery
             widget: object
             fields:
-              label: Images
+            - label: Images
               name: images
               widget: list
               fields:
-                label: Image
+              - label: Image
                 name: image
                 widget: image
                 default: "/static/img/placeholder.jpg"
