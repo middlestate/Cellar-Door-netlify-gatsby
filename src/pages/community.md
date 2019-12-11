@@ -13,5 +13,6 @@ gallery:
     - image: /img/artists2.jpeg
     - image: /img/artist.jpg
     - image: /img/vq.jpg
+    - image: /img/south-65.jpg
 ---
 
