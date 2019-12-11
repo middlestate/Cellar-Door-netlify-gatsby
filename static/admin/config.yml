@@ -71,9 +71,9 @@ collections:
               config:
                 multiple: true
           - {label: "Section Title", name: "section_title", widget: "string"}
-          - label: Gallery,
-            name: gallery,
-            widget: object,
+          - label: Gallery
+            name: gallery
+            widget: object
             fields:
               label: Images
               name: images
