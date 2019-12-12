@@ -11,9 +11,7 @@ import Layout from '../components/Layout'
 export const AboutPageTemplate = ({ background_image, title, description, community, culture, craft }) => (
   <main
     style={{
-      backgroundImage: `url(${
-        !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-      }) no-repeat center center fixed`,
+      backgroundImage: `url(${background_image}) no-repeat center center fixed`,
     }}>
     <div
       style={{
@@ -30,9 +28,7 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
           position: 'fixed',
           height: '100%',
           width: '100%',
-          backgroundImage: `url(${
-            !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-          })`,
+          backgroundImage: `url(${background_image})`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -136,7 +132,7 @@ export const AboutPageTemplate = ({ background_image, title, description, commun
 )
 
 AboutPageTemplate.propTypes = {
-  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  background_image: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   community: PropTypes.shape({
@@ -196,13 +192,7 @@ export const pageQuery = graphql`
   query AboutPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
-        background_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        background_image
         title
         description
         community {

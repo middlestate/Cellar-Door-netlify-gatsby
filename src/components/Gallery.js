@@ -10,7 +10,7 @@ const Gallery = ({ gridItems }) => {
         return (
           <div key={keys} className="gallery-column">
             {console.log(image)}
-            <img src={image.childImageSharp.fluid.src || image} alt="artist" />
+            <img src={image} alt="artist" />
           </div>
         )
       })}
@@ -20,7 +20,7 @@ const Gallery = ({ gridItems }) => {
 
 Gallery.propTypes = {
   images: PropTypes.shape({
-    image: PropTypes.arrayOf(PropTypes.oneOf([PropTypes.object, PropTypes.string])),
+    image: PropTypes.string,
   }),
 }
 

@@ -16,7 +16,7 @@ export const CalendarPageTemplate = ({
 }) => (
   <main
     style={{
-      backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image}) no-repeat center center fixed`
+      backgroundImage: `url(${background_image}) no-repeat center center fixed`
     }}>
     <div
     style={{
@@ -33,7 +33,7 @@ export const CalendarPageTemplate = ({
         position: 'fixed',
         height: '100%',
         width: '100%',
-        backgroundImage: `url(${!!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image})`,
+        backgroundImage: `url(${background_image})`,
         backgroundRepeat: 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -49,7 +49,7 @@ export const CalendarPageTemplate = ({
 )
 
 CalendarPageTemplate.propTypes = {
-  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  background_image: PropTypes.string,
   title: PropTypes.string
 }
 
@@ -80,13 +80,7 @@ export const pageQuery = graphql`
   query CalendarPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "calendar-page" } }) {
       frontmatter {
-        background_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }    
-        }
+        background_image
         title
       }
     }
