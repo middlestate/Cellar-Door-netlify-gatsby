@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: panic-master
+  branch: the-doors
 
 media_folder: static/img
 public_folder: /img
