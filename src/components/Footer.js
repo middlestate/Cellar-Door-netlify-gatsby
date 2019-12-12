@@ -13,7 +13,7 @@ const Footer = class extends React.Component {
             <h5>559-239-4004</h5>
           </div>
           <Link to="/">
-            <img src="img/footer_logo.png" alt="cellar door"/>
+            <img src="/img/footer_logo.png" alt="cellar door"/>
           </Link>
           <div className="social-media">
             <div className="social-icon-container">
