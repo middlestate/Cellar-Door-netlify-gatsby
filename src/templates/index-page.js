@@ -11,9 +11,7 @@ import Layout from '../components/Layout'
 export const IndexPageTemplate = ({ background_image, logo, title, description, artist, food }) => (
   <main
     style={{
-      backgroundImage: `url(${
-        !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-      }) no-repeat center center fixed`,
+      backgroundImage: `url(${background_image}) no-repeat center center fixed`,
     }}>
     <div
       style={{
@@ -30,9 +28,7 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
           position: 'fixed',
           height: '100%',
           width: '100%',
-          backgroundImage: `url(${
-            !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-          })`,
+          backgroundImage: `url(${background_image})`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -41,7 +37,7 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
       />
     </div>
     <div className="title-container">
-      <img src={!!logo.childImageSharp ? logo.childImageSharp.fluid.src : logo} alt="cellar door" />
+      <img src={logo} alt="cellar door" />
     </div>
 
     <div className="upcoming-events">
@@ -71,7 +67,7 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
       <div className="artist-container">
         <h2 className="title">Artist Spotlight</h2>
         <img
-          src={!!artist.image.childImageSharp ? artist.image.childImageSharp.fluid.src : artist.image}
+          src={artist.image}
           alt="artists"
         />
         <h2 className="artist-name">{artist.name}</h2>
@@ -110,13 +106,13 @@ export const IndexPageTemplate = ({ background_image, logo, title, description, 
 )
 
 IndexPageTemplate.propTypes = {
-  background_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  logo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  background_image: PropTypes.string,
+  logo: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   artist: PropTypes.shape({
     name: PropTypes.string,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image: PropTypes.string,
     description: PropTypes.string,
     website: PropTypes.string,
     spotify: PropTypes.string
@@ -158,31 +154,13 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        background_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        logo {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        background_image
+        logo
         title
         description
         artist {
           name
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          image
           description
           website
           tickets

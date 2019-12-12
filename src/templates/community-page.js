@@ -12,9 +12,7 @@ import PDFrender from '../components/PDFrender'
 export const CommunityPageTemplate = ({ background_image, title, pdf_title, pdf_filename, menu, section_title, gallery }) => (
   <main
     style={{
-      backgroundImage: `url(${
-        !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-      }) no-repeat center center fixed`,
+      backgroundImage: `url(${background_image}) no-repeat center center fixed`,
     }}>
     <div
       style={{
@@ -31,9 +29,7 @@ export const CommunityPageTemplate = ({ background_image, title, pdf_title, pdf_
           position: 'fixed',
           height: '100%',
           width: '100%',
-          backgroundImage: `url(${
-            !!background_image.childImageSharp ? background_image.childImageSharp.fluid.src : background_image
-          })`,
+          backgroundImage: `url(${background_image})`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -60,7 +56,7 @@ const CommunityPage = ({ data }) => {
         title={frontmatter.title}
         pdf_filename={frontmatter.pdf_filename}
         pdf_title={frontmatter.pdf_title}
-        menu={frontmatter.menu.publicURL}
+        menu={frontmatter.menu}
         section_title={frontmatter.section_title}
         gallery={frontmatter.gallery}
       />
@@ -94,29 +90,15 @@ export const pageQuery = graphql`
   query CommunityPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "community-page" } }) {
       frontmatter {
-        background_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        background_image
         title
         pdf_title
         pdf_filename
-        menu {
-          publicURL
-        }
+        menu
         section_title
         gallery {
           images {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }

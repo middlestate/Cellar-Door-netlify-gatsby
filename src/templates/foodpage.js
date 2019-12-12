@@ -49,7 +49,7 @@ const FoodPage = ({ data }) => {
         title={frontmatter.title}
         pdf_title={frontmatter.pdf_title}
         pdf_filename={frontmatter.pdf_filename}
-        menu={frontmatter.menu.publicURL}
+        menu={frontmatter.menu}
       />
     </Layout>
   )
@@ -79,9 +79,7 @@ export const pageQuery = graphql`
         title
         pdf_title
         pdf_filename
-        menu {
-          publicURL
-        }
+        menu
       }
     }
   }
