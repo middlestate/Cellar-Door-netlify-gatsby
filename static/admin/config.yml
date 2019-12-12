@@ -82,7 +82,3 @@ collections:
               - label: Image
                 name: image
                 widget: image
-                default: "/static/img/artist.jpg"
-                media_library:
-                  config:
-                    multiple: true
