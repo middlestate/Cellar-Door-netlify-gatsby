@@ -14,5 +14,6 @@ gallery:
     - image: /img/artist.jpg
     - image: /img/vq.jpg
     - image: /img/south-65.jpg
+    - image: /img/leaving_austin.png
 ---
 
