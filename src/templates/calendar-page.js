@@ -43,7 +43,7 @@ export const CalendarPageTemplate = ({
     </div>
     <h1 className="calendar-title">{title}</h1>
     <div className="events-container" id="events-container">
-      <EventCards maxEvents={12} />
+      <EventCards maxEvents={30} />
     </div>
   </main>
 )
