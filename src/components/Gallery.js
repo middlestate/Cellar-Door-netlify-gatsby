@@ -8,7 +8,7 @@ const Gallery = ({ gridItems }) => {
         return (
           <div key={keys} className="gallery-column">
             {console.log(image)}
-            <img src={image} alt="artist" />
+            <img src={image.childImageSharp.fluid.src ? image.childImageSharp.fluid.src : image} alt="artist" />
           </div>
         )
       })}
