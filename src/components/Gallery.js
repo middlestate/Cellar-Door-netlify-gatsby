@@ -8,7 +8,7 @@ const Gallery = ({ gridItems }) => {
         return (
           <div key={keys} className="gallery-column">
             {console.log(image)}
-            <img src={image ? image : '../img/artist.jpg'} alt="artist" />
+            <img src={image} alt="artist" />
           </div>
         )
       })}
