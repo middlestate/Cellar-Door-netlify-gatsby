@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// some comment
+
 const Gallery = ({ gridItems }) => {
   return (
     <div className="gallery-row">
