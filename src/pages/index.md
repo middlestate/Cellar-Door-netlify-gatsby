@@ -12,7 +12,7 @@ artist:
   description: 'Saturday, January 25 @ 8PM'
   image: /img/oc-hurricanes.jpg
   name: OC Hurricanes
-  spotify: 'https://open.spotify.com/artist/4qnBL2IXhAJKYEajOLvzez'
+  spotify: 'https://open.spotify.com/embed/artist/4qnBL2IXhAJKYEajOLvzez'
   tickets: snvfoundation.org
   website: theochurricanes.bandcamp.com/
 food:
