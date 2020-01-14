@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Friday, November 29 @ 8PM'
-  image: /img/leaving_austin.png
-  name: Leaving Austin
-  spotify: 'https://open.spotify.com/embed/artist/67igAZjBrO42dnYYbTT6WI'
-  tickets: 'https://www.universe.com/embed2/events/leaving-austin-tickets-9BTJDR'
-  website: 'https://leavingaustinband.com/'
+  description: 'Saturday, January 25 @ 8PM'
+  image: /img/oc-hurricanes.jpg
+  name: OC Hurricanes
+  spotify: 'https://open.spotify.com/embed/artist/4qnBL2IXhAJKYEajOLvzez'
+  tickets: snvfoundation.org
+  website: theochurricanes.bandcamp.com/
 food:
   title: Food & Drinks
   description: >-
