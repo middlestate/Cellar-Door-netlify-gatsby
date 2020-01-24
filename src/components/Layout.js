@@ -29,8 +29,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
         <link rel="preload" href="../components/fonts.css" as="style" type="text/css" crossorigin />
-        <link rel="preload" href={GilroyLight} as="font" type="font/otf" crossorigin />
-        <link rel="preload" href={GilroySemiBold} as="font" type="font/otf" crossorigin />
+        <link rel="preload" href={GilroyLight} as="font" type="font/otf" crossorigin="use-credentials" />
+        <link rel="preload" href={GilroySemiBold} as="font" type="font/otf" crossorigin="use-credentials" />
       </Helmet>
       <Navbar />
       <div>{children}</div>
