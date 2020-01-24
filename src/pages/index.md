@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-background_image: /img/main_background.png
+background_image: /img/main_background.jpg
 logo: /img/logo.png
 title: Restaurant and Music Hall that defies definition
 description: >-
