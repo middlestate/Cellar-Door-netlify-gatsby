@@ -1,6 +1,6 @@
 ---
 templateKey: community-page
-background_image: /img/main_background.png
+background_image: /img/main_background.webp
 title: Community
 pdf_title: Flyer
 pdf_filename: coming_soon

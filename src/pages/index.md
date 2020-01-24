@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-background_image: /img/main_background.png
+background_image: /img/main_background.webp
 logo: /img/logo.png
 title: Restaurant and Music Hall that defies definition
 description: >-
@@ -10,7 +10,7 @@ description: >-
   you.
 artist:
   description: 'Saturday, January 25 @ 8PM'
-  image: /img/oc-hurricanes.jpg
+  image: /img/oc-hurricanes.webp
   name: OC Hurricanes
   spotify: 'https://open.spotify.com/embed/artist/4qnBL2IXhAJKYEajOLvzez'
   tickets: snvfoundation.org
