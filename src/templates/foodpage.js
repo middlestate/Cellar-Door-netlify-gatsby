@@ -8,7 +8,7 @@ import PDFrender from '../components/PDFrender'
 export const FoodPageTemplate = ({ title, pdf_title, pdf_filename, menu }) => (
   <main
     style={{
-      backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`,
+      backgroundImage: `url('../img/main_background.jpg') no-repeat center center fixed`,
     }}>
     <div
       style={{
