@@ -25,7 +25,7 @@ export const FoodPageTemplate = ({ title, pdf_title, pdf_filename, menu }) => (
           position: 'fixed',
           height: '100%',
           width: '100%',
-          backgroundImage: `url("../img/main_background.png")`,
+          backgroundImage: `url("../img/main_background.jpg")`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
