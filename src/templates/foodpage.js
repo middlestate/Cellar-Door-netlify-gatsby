@@ -8,7 +8,7 @@ import PDFrender from '../components/PDFrender'
 export const FoodPageTemplate = ({ title, pdf_title, pdf_filename, menu }) => (
   <main
     style={{
-      backgroundImage: `url('../img/main_background.jpg') no-repeat center center fixed`,
+      backgroundImage: `url('../img/main_background.webp') no-repeat center center fixed`,
     }}>
     <div
       style={{
@@ -25,7 +25,7 @@ export const FoodPageTemplate = ({ title, pdf_title, pdf_filename, menu }) => (
           position: 'fixed',
           height: '100%',
           width: '100%',
-          backgroundImage: `url("../img/main_background.jpg")`,
+          backgroundImage: `url("../img/main_background.webp")`,
           backgroundRepeat: 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
