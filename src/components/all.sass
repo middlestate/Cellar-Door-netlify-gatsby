@@ -164,7 +164,23 @@ main
   color: #AD0E2B 
  
 
-button,.description > a,.description > p > a,.description > b > a,.description > b > i > a
+button,.description > a,.description > p > a,.description > b > a
+  background-color: transparent 
+  color: #ffffff 
+  border-radius: 25px 
+  width: 140px 
+  height: 33px 
+  border: 2px solid #AD0E2B 
+  text-transform: uppercase 
+  font-size: 12px 
+  letter-spacing: 1px 
+  line-height: 20px 
+  margin: 10px 
+  padding: 5px 
+  text-align: center 
+  transition: 0.3s
+
+.description > b > i > a
   background-color: transparent 
   color: #ffffff 
   border-radius: 25px 
@@ -181,7 +197,12 @@ button,.description > a,.description > p > a,.description > b > a,.description >
   transition: 0.3s
  
 
-button:hover,.description > a:hover,.description > p > a:hover,.description > b > a:hover,.description > b > i > a:hover
+button:hover,.description > a:hover,.description > p > a:hover,.description > b > a:hover
+  cursor: pointer 
+  background-color: white
+  color: black
+
+.description > b > i > a:hover
   cursor: pointer 
   background-color: white
   color: black
