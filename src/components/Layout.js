@@ -28,8 +28,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
-        <link rel="preload" href={GilroyLight} />
-        <link rel="preload" href={GilroySemiBold} />
+        <link rel="preload" href={GilroyLight} as="style" />
+        <link rel="preload" href={GilroySemiBold} as="style" />
       </Helmet>
       <Navbar />
       <div>{children}</div>
