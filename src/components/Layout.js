@@ -4,6 +4,9 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 import './fonts.css'
+import GilroyLight from '../components/fonts/Gilroy-Light.otf'
+import GilroySemiBold from '../components/fonts/Gilroy-SemiBold.otf'
+
 import useSiteMetadata from './SiteMetadata'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,8 +28,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
-        <link rel="preload" href="/src/components/fonts/Gilroy-Light.otf" />
-        <link rel="preload" href="/src/components/fonts/Gilroy-SemiBold.otf" />
+        <link rel="preload" href={GilroyLight} />
+        <link rel="preload" href={GilroySemiBold} />
       </Helmet>
       <Navbar />
       <div>{children}</div>
