@@ -16,7 +16,7 @@ const magicButton = link => {
     return null
   } else {
     return (
-      <a className="button is-right" href={link}>
+      <a className="link button is-right" href={link}>
         BUY TICKETS
       </a>
     )

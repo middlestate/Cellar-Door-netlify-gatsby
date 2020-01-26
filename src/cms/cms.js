@@ -16,3 +16,5 @@ CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('calendar', CalendarPagePreview)
 CMS.registerPreviewTemplate('foodpage', FoodPagePreview)
 CMS.registerPreviewTemplate('community', CommunityPagePreview)
+
+CMS.registerPreviewStyle('/src/components/fonts.css')
