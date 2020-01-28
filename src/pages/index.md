@@ -11,7 +11,7 @@ description: >-
 artist:
   description: 'Saturday, February 8 @ 7PM'
   image: /img/brother m.jpg
-  name: OC Hurricanes
+  name: Brother M
   spotify: 'https://open.spotify.com/artist/1WhkA1lYZYUmaMddO2k0x9'
   tickets: snvfoundation.org
   website: 'https://brotherm.bandcamp.com/music'
