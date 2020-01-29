@@ -1,0 +1,5 @@
+node_modules
+lambda
+yarn.lock
+.env
+.netlify
