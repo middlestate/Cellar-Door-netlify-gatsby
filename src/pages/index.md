@@ -12,7 +12,7 @@ artist:
   description: 'Saturday, February 8 @ 7PM'
   image: /img/brother m.jpg
   name: Brother M
-  spotify: 'https://open.spotify.com/artist/1WhkA1lYZYUmaMddO2k0x9'
+  spotify: 'https://open.spotify.com/embed/artist/1WhkA1lYZYUmaMddO2k0x9'
   tickets: snvfoundation.org
   website: 'https://brotherm.bandcamp.com/music'
 food:
