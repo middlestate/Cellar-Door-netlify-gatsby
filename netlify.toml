@@ -16,7 +16,3 @@
   functions = "functions"
   publish = "public"
 
-[build.environment]
-  # your node version, if you need to set it, otherwise netlify defaults to 8
-
-  NODE_VERSION = "10"
