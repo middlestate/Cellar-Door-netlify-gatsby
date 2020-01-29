@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Saturday, January 25 @ 8PM'
-  image: /img/oc-hurricanes.webp
-  name: OC Hurricanes
-  spotify: 'https://open.spotify.com/embed/artist/4qnBL2IXhAJKYEajOLvzez'
+  description: 'Saturday, February 8th @ 6PM'
+  image: /img/brother m.jpg
+  name: 'Brother M '
+  spotify: 'https://embed.spotify.com/artist/1WhkA1lYZYUmaMddO2k0x9'
   tickets: snvfoundation.org
-  website: theochurricanes.bandcamp.com/
+  website: 'https://brotherm.bandcamp.com/music'
 food:
   title: Food & Drinks
   description: >-
