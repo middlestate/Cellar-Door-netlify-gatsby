@@ -7,3 +7,11 @@ public/
 static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
+functions/.env
+functions/.netlify
+functions/node_modules
+functions/lambda
+functions/yarn.lock
+functions/functions
+functions/calendar-editor.json
+functions/client_secret*

@@ -1,7 +1,22 @@
 [build]
+  # the command line is only used if you've liked to github
+
+  # command = "netlify-lambda build calendar-event/src/lambda"
+
+  # netlify-lambda stores stuff here
+  # change this to lambda if deploying from github
+
+  # functions = "./functions"
+  # functions = "lambda"
+
+  # the name of the folder where your website is, for example use build or public, etc
+  # if you are only deploying this function to it's own netlify instance then comment out this line.
+
+  command = "yarn run build"
+  functions = "functions"
   publish = "public"
-  command = "npm run build"
-  functions = "lambda"
+
 [build.environment]
-  YARN_VERSION = "1.9.4"
-  YARN_FLAGS = "--no-ignore-optional"
+  # your node version, if you need to set it, otherwise netlify defaults to 8
+
+  NODE_VERSION = "10"
