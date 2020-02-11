@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Saturday, February 8 @ 7PM'
-  image: /img/brother m.jpg
-  name: 'Brother M '
+  description: 'Saturday, March 7 @ 7PM'
+  image: /img/macondo pic.jpg
+  name: Macondo
   spotify: 'https://embed.spotify.com/artist/1WhkA1lYZYUmaMddO2k0x9'
   tickets: snvfoundation.org
-  website: 'https://brotherm.bandcamp.com/music'
+  website: 'https://www.facebook.com/MacondoMusic/'
 food:
   title: Food & Drinks
   description: >-
