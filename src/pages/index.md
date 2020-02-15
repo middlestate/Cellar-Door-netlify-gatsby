@@ -9,12 +9,12 @@ description: >-
   light on creators of all kinds - we are here to celebrate our community with
   you.
 artist:
-  description: 'Saturday, February 8th @ 6PM'
-  image: /img/brother m.jpg
-  name: 'Brother M '
-  spotify: 'https://embed.spotify.com/artist/1WhkA1lYZYUmaMddO2k0x9'
+  description: 'Thursday, March 12th @ 7PM (All ages!)'
+  image: /img/blind owl.jpg
+  name: The Blind Owls
+  spotify: 'https://open.spotify.com/artist/3oAntXwVoO8QOFc1U9h9Bm?autoplay=true&v=A'
   tickets: snvfoundation.org
-  website: 'https://brotherm.bandcamp.com/music'
+  website: 'https://www.facebook.com/TheBlindOwls/'
 food:
   title: Food & Drinks
   description: >-
