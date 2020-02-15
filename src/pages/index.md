@@ -12,7 +12,7 @@ artist:
   description: 'Thursday, March 12th @ 7PM (All ages!)'
   image: /img/blind owl.jpg
   name: The Blind Owls
-  spotify: 'https://open.spotify.com/artist/3oAntXwVoO8QOFc1U9h9Bm?autoplay=true&v=A'
+  spotify: 'https://embed.spotify.com/artist/3oAntXwVoO8QOFc1U9h9Bm?autoplay=true&v=A'
   tickets: snvfoundation.org
   website: 'https://www.facebook.com/TheBlindOwls/'
 food:
