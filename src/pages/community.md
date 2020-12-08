@@ -4,7 +4,7 @@ background_image: /img/main_background.webp
 title: Community
 pdf_title: Flyer
 pdf_filename: coming_soon
-menu: /img/SNV-Fundraiser-Sponsorship.pdf
+menu: /img/about_background.jpg
 section_title: Gallery
 gallery:
   images:
