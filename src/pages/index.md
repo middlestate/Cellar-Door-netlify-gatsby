@@ -22,8 +22,9 @@ food:
     We are a hub of creative energy pushing the boundaries of collaboration in
     food, music, and art. Not afraid to explore new territories and shine the
     light on creators of all kinds - we are here to celebrate our community with
-    you. | We are open for breakfast and lunch Tuesday through Friday starting
-    at 8:00 AM and Saturdays at 3:00 PM. Available for dine-in, take-out, or
-    delivery through Grubhub app!
+    you. | 
+
+
+    We are open for dinner from Tuesday through Saturday starting at 6:00 PM.
 ---
 
