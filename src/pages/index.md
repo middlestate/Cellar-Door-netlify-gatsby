@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-background_image: /img/main_background.webp
+background_image: /img/CellarDoorOutdoors-1.jpg
 logo: /img/logo.png
 title: Restaurant and Music Hall that defies definition
 description: >-
